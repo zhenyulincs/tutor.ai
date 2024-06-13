@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: ./frontend
-
+      output-build: ./frontend/out/
     strategy:
       matrix:
         node-version: [20.x]
@@ -29,19 +29,22 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      working-directory: ${{env.working-directory}}
+      
     - run: npm install
+      working-directory: ${{env.working-directory}}
     - run: npm ci
+      working-directory: ${{env.working-directory}}
     - run: npm run build --if-present
+      working-directory: ${{env.working-directory}}
 
     - name: deploy file
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      working-directory: ${{env.working-directory}}
+      
       with:
           username: ${{ secrets.SERVERUSERNAME }}
           server: ${{ secrets.SERVERIP }}
           password: ${{ secrets.SERVERPASSWORD }}
-          local_path: './out/*'
+          local_path: ${{env.output-build}}
           remote_path: 'public_html/'
           sftpArgs: '-o ConnectTimeout=5'
           sftp_only: true
