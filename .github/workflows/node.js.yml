@@ -36,4 +36,4 @@ jobs:
         server: ${{ secrets.SERVERIP }}
         username: ${{ secrets.SERVERUSERNAME }}
         password: ${{ secrets.SERVERPASSWORD }}
-        local-dir: ./out
+        local-dir: ./out/
