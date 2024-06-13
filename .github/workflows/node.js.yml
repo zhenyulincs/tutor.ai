@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: ./frontend
-      output-build: ./frontend/out/
+      output-build: ./frontend/out/*
       npm-cache: ./frontend/package-lock.json
     strategy:
       matrix:
