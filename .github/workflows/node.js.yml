@@ -40,3 +40,4 @@ jobs:
           local_path: './out/*'
           remote_path: './'
           sftpArgs: '-o ConnectTimeout=5'
+          sftp_only: true
