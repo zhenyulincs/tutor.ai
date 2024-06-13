@@ -30,10 +30,12 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-    - name: 
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: deploy file
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.SERVERIP }}
-        username: ${{ secrets.SERVERUSERNAME }}
-        password: ${{ secrets.SERVERPASSWORD }}
-        # local-dir: ./out/
+          username: ${{ secrets.SERVERUSERNAME }}
+          server: ${{ secrets.SERVERIP }}
+          ssh_private_key: ${{ secrets.SERVERPASSWORD }}
+          local_path: './out/*'
+          remote_path: './'
+          sftpArgs: '-o ConnectTimeout=5'
