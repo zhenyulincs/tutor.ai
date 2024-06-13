@@ -38,6 +38,6 @@ jobs:
           server: ${{ secrets.SERVERIP }}
           password: ${{ secrets.SERVERPASSWORD }}
           local_path: './out/*'
-          remote_path: './'
+          remote_path: './public_html/'
           sftpArgs: '-o ConnectTimeout=5'
           sftp_only: true
