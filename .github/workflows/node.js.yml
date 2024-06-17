@@ -51,7 +51,7 @@ jobs:
       with:
           username: ${{ secrets.SERVERUSERNAME }}
           server: ${{ secrets.SERVERIP }}
-          password: ${{ secrets.SERVERPASSWORD }}
+          ssh_private_key: ${{ secrets.SERVERPASSWORD }}
           local_path: ${{env.output-build}}
           remote_path: ${{env.remote-directory}}
           sftpArgs: '-o ConnectTimeout=5'
