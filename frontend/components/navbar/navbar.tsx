@@ -1,4 +1,4 @@
-import { Button, Dropdown, DropdownTrigger, Link, Navbar, Switch, Text } from '@nextui-org/react';
+import { Button, Dropdown, Link, Navbar, Switch, Text } from '@nextui-org/react';
 import React from 'react';
 import { ModalLogin } from '../modal';
 import { icons } from './icons';
