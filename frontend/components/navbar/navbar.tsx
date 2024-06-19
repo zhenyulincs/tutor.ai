@@ -1,5 +1,6 @@
 import { Button, Dropdown, Link, Navbar, Switch, Text } from '@nextui-org/react';
 import React from 'react';
+import { useEffect } from 'react';
 import { ModalLogin } from '../modal';
 import { icons } from './icons';
 import { AcmeLogo } from './logo';
@@ -17,6 +18,9 @@ export const Nav = () => {
       'Company',
       'Legal',
    ];
+
+
+
    return (
       <Navbar
          isBordered
@@ -57,7 +61,7 @@ export const Nav = () => {
                      </Dropdown.Button>
                   </Navbar.Item>
                   <Dropdown.Menu
-                     aria-label="ACME features"
+                     aria-label="Tutor.ai features"
                      css={{
                         '$$dropdownMenuWidth': '340px',
                         '$$dropdownItemHeight': '70px',
@@ -106,8 +110,17 @@ export const Nav = () => {
                      >
                         KnowledgeDetectAI
                      </Dropdown.Item>
+                     <Dropdown.Item
+                        key="WisdomAI"
+                        showFullDescription
+                        description="Talk to your personal tutor 24/7 in real time"
+                        icon={icons.server}
+                     >
+                        WisdomAI
+                     </Dropdown.Item>
                   </Dropdown.Menu>
                </Dropdown>
+
                <Dropdown isBordered>
                   <Navbar.Item>
                      <Dropdown.Button
@@ -125,57 +138,95 @@ export const Nav = () => {
                      </Dropdown.Button>
                   </Navbar.Item>
                   <Dropdown.Menu
-                     aria-label="ACME features"
+                     color="secondary"
+                     aria-label="Actions"
                      css={{
-                        '$$dropdownMenuWidth': '340px',
-                        '$$dropdownItemHeight': '70px',
+                        $$dropdownMenuWidth: "100%",
+                        display: 'flex',
+                        "flex-wrap": "wrap",
+                        '$$dropdownItemHeight': '100px',
                         '& .nextui-dropdown-item': {
-                           'py': '$4',
+                           'py': '$2',
                            'svg': {
                               color: '$secondary',
                               mr: '$4',
                            },
+                           
+                           h: "50%",
                            '& .nextui-dropdown-item-content': {
                               w: '100%',
-                              fontWeight: '$semibold',
+                              fontWeight: '$medium',
+                              margin:'$4 $4 $4 0',
                            },
+                           w: '100%',
                         },
+                        '& .nextui-dropdown-section-divider': {
+                           display: 'none'
+                        },
+                        '& .nextui-dropdown-section': {
+                           background: '#f4f4f5',
+                           margin: "$2"
+                        },
+                        '& .nextui-dropdown-section-wrapper': {
+                           flex: "1 1 auto",
+                           "white-space": "nowrap",
+                           overflow: "hidden",
+                           "text-overflow":"ellipsis",
+                           
+                        },
+                        '& .nextui-dropdown-section-title': {
+                           fontWeight: '$semibold',
+                           "font-size": "inherit",
+                           color: "inherit"
+                        }
                      }}
                   >
-                     <Dropdown.Item
-                        key="PreparAI"
-                        showFullDescription
-                        description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
-                        icon={icons.scale}
-                     >
-                        PreparAI
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="HomeworkAidAI"
-                        showFullDescription
-                        description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
-                        icon={icons.activity}
-                     >
-                        HomeworkAidAI
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="QuizzAI"
-                        showFullDescription
-                        description="Create and practice with quizzes from your course material. "
-                        icon={icons.flash}
-                     >
-                        QuizzAI
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="KnowledgeDetectAI"
-                        showFullDescription
-                        description="Analyzes homework and exam, Identifies knowledge gaps, and Informs targeted instructional strategies."
-                        icon={icons.server}
-                     >
-                        KnowledgeDetectAI
-                     </Dropdown.Item>
+                     <Dropdown.Section title="AI Learning">
+                        <Dropdown.Item
+                           key="Prepare for Class"
+                           icon={icons.server}
+                        >
+                           Prepare for Class
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                           key="Review After Class"
+                           icon={icons.server}
+                        >
+                           Review After Class
+                        </Dropdown.Item>
+                     </Dropdown.Section>
+                     <Dropdown.Section title="AI Asking">
+                        <Dropdown.Item
+                           key="Exam Preparation"
+                           icon={icons.server}
+                        >
+                           Exam Preparation
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                           key="Exam Review"
+                           icon={icons.server}
+                        >
+                           Exam Review
+                        </Dropdown.Item>
+
+                     </Dropdown.Section>
+                     <Dropdown.Section title="AI Preparation">
+                        <Dropdown.Item
+                           key="Paractice Generation"
+                           icon={icons.server}
+                        >
+                           Paractice Generation
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                           key="Knowledge Gap Analysis"
+                           icon={icons.server}
+                        >
+                           Knowledge Gap Analysis
+                        </Dropdown.Item>
+                     </Dropdown.Section>
                   </Dropdown.Menu>
                </Dropdown>
+
                <Navbar.Link href="#">Our Blog</Navbar.Link>
                <Navbar.Link href="#">For Educators</Navbar.Link>
             </Navbar.Content>
@@ -217,13 +268,8 @@ export const Nav = () => {
             </Navbar.CollapseItem>
          </Navbar.Collapse>
          <Navbar.Content>
-            <ModalLogin />
 
-            <Navbar.Item>
-               <Button auto flat href="#">
-                  Start free trial
-               </Button>
-            </Navbar.Item>
+
             <Navbar.Item hideIn={'xs'}>
                <Link
                   color="inherit"
