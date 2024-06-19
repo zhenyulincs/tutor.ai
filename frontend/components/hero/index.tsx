@@ -64,7 +64,11 @@ export const Hero = () => {
                   >
                      <Typewriter
                         options={{
-                           strings: ['Course', 'Homework'],
+                           strings: [
+                              'Course', 
+                              'Homework',
+                              "Quizzes"
+                           ],
                            autoStart: true,
                            loop: true,
                            skipAddStyles: true
