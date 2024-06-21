@@ -41,6 +41,7 @@ export const Hero = () => {
                      h1
                      css={{
                         display: 'inline',
+                        
                      }}
                   >
                      Chat and learn: {' '}
@@ -59,7 +60,7 @@ export const Hero = () => {
                      css={{
                         display: 'inline',
                      }}
-                  >
+                  >     
                      <Typewriter
                         options={{
                            strings: [
@@ -106,19 +107,21 @@ export const Hero = () => {
                   }}
                   wrap={'wrap'}
                >
-                  <Button>
-                     <Link
-                        color="inherit"
-                        css={{
-                           minWidth: '100%',
-                        }}
-                        target="_blank"
-                        href="ai_chat"
-                     >
-                        Get Started
-                     </Link>
 
-                  </Button>
+                  <Link
+                     color="inherit"
+                     css={{
+                        minWidth: '100%',
+                     }}
+                     target="_blank"
+                     href="ai_chat"
+                  >
+                     <Button>
+                        Get Started
+                     </Button>
+                  </Link>
+
+
                </Flex>
 
             </Box>
