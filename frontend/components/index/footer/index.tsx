@@ -1,8 +1,8 @@
 import {Divider, Text} from '@nextui-org/react';
 import React from 'react';
 import {AcmeLogo} from '../navbar/logo';
-import {Box} from '../styles/box';
-import {Flex} from '../styles/flex';
+import {Box} from '../../styles/box';
+import {Flex} from '../../styles/flex';
 
 export const Footer = () => {
    return (

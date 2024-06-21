@@ -1,9 +1,9 @@
 import {Divider, Grid, Text} from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../icons/BoxIcon';
-import {FeatureIcon} from '../icons/FeatureIcon';
-import {Box} from '../styles/box';
-import {Flex} from '../styles/flex';
+import {BoxIcon} from '../../icons/BoxIcon';
+import {FeatureIcon} from '../../icons/FeatureIcon';
+import {Box} from '../../styles/box';
+import {Flex} from '../../styles/flex';
 
 export const Features1 = () => {
    return (

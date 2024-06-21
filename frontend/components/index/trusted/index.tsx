@@ -1,7 +1,7 @@
 import {Button, Divider, Grid, Text} from '@nextui-org/react';
 import React from 'react';
 import {AcmeLogo} from '../navbar/logo';
-import {Flex} from '../styles/flex';
+import {Flex} from '../../styles/flex';
 
 export const Trusted = () => {
    return (

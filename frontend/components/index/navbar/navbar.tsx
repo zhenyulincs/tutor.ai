@@ -6,7 +6,7 @@ import { icons } from './icons';
 import { AcmeLogo } from './logo';
 import { useTheme as useNextTheme } from 'next-themes';
 import { useTheme } from '@nextui-org/react';
-import { GithubIcon } from '../icons/GithubIcon';
+import { GithubIcon } from '../../icons/GithubIcon';
 
 export const Nav = () => {
    const { setTheme } = useNextTheme();

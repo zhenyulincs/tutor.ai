@@ -1,8 +1,8 @@
 import { Button, Divider, Input, Text } from '@nextui-org/react';
 import React from 'react';
-import { CheckIcon } from '../icons/CheckIcon';
-import { Box } from '../styles/box';
-import { Flex } from '../styles/flex';
+import { CheckIcon } from '../../icons/CheckIcon';
+import { Box } from '../../styles/box';
+import { Flex } from '../../styles/flex';
 import Typewriter from 'typewriter-effect';
 import styles from './hero.module.css';
 export const Hero = () => {

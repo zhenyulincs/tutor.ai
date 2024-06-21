@@ -1,6 +1,6 @@
 import {Button, Divider, Text} from '@nextui-org/react';
 import React from 'react';
-import {Flex} from '../styles/flex';
+import {Flex} from '../../styles/flex';
 
 export const Trial = () => {
    return (

@@ -1,8 +1,8 @@
 import {Button, Divider, Text} from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../icons/BoxIcon';
-import {FeatureIcon} from '../icons/FeatureIcon';
-import {Flex} from '../styles/flex';
+import {BoxIcon} from '../../icons/BoxIcon';
+import {FeatureIcon} from '../../icons/FeatureIcon';
+import {Flex} from '../../styles/flex';
 
 export const Features2 = () => {
    return (
