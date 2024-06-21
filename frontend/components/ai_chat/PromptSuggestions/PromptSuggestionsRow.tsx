@@ -8,8 +8,16 @@ const PromptSuggestionRow = ({ onPromptClick,prompt_index }) => {
     'ENGR 478',
     'ENGR 413',
   ],
+  [
+    'Preview Class',
+    'Review Class',
+    'I don\' know how to do the homework',
+    'Not sure where do I got wrong for the homework',
+    'Preparing exam, need more paractice problems',
+    'Got an bad grade on exam, need analysis my weakness on knowledge'
+  ],
 ];
-  console.log(prompt_index);
+// console.log(prompt_index);
   return (
     <div className="flex flex-row flex-wrap justify-start items-center py-4 gap-2">
       {prompts[prompt_index].map((prompt, index) => (

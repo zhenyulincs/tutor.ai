@@ -1,5 +1,5 @@
 "use client";
-import type {NextPage} from 'next';
+import type { NextPage } from 'next';
 
 import { useEffect, useRef, useState } from 'react';
 import Bubble from '../components/ai_chat/Bubble';
@@ -8,23 +8,39 @@ import PromptSuggestionRow from '../components/ai_chat/PromptSuggestions/PromptS
 import ThemeButton from '../components/ai_chat/ThemeButton';
 
 const AI_Chat: NextPage = () => {
-  const init_messages = [
+
+  const pre_messages: Message[] = []
+
+  const init_messages: Message[] = [
     {
       id: crypto.randomUUID(), content: "Welcome to tutor.ai, I am WisdomWhiz, can you tell me what class are you taking", role: 'assistant'
     }
   ]
 
-  const pre_knowldege_questions = [
+
+  const functionality_question = (selected_class: string): Message[] => {
+    return [
+      {
+        id: crypto.randomUUID(),
+        content: `Great, you are taking ${selected_class}, What bring you in today?`,
+        role: 'assistant'
+      }
+    ];
+  }
+    
+  const connecting_message : Message[] = [
     {
-      id: crypto.randomUUID(), content: "Welcome to tutor.ai, I am WisdomWhiz, can you tell me what class are you taking", role: 'assistant'
+      id: crypto.randomUUID(),
+      content: `Great, connecting you to the backend AI Service, given an moment...`,
+      role: 'assistant'
     }
   ]
-  
-  const { append, messages, input, handleInputChange, handleSubmit } = useChat(
-    {api:"api/mistral",initialMessages:init_messages}
+
+  const { append, messages, input, handleInputChange, handleSubmit, setMessages } = useChat(
+    { api: "api/mistral", initialMessages: init_messages }
   );
 
-  const users_message_count = Math.round(messages.length/2)-1
+  const users_message_count = messages.filter(item => item.role === 'user').length;
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -37,18 +53,27 @@ const AI_Chat: NextPage = () => {
 
   const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
     const msg: Message = { id: crypto.randomUUID(), content: input, role: 'user' };
-    messages.push(msg);
-    handleSubmit(e, { options: { body: {input} } });
+
+    // messages.push(msg);
+    // handleSubmit(e, { options: { body: {input} } });
   };
 
-  const handlePrompt = (promptText: string) => {
+  const handlePrompt = async (promptText: string) => {
     const msg: Message = { id: crypto.randomUUID(), content: promptText, role: 'user' };
-    messages.push(msg);
-    append(msg, { options: {  } });
-    console.log();
-  };
+    pre_messages.push(msg);
+    if (users_message_count == 0) {
+      pre_messages.push(...functionality_question(msg.content));
+    } else if (users_message_count == 1) {
+      pre_messages.push(...connecting_message);
+    }
+    setMessages([...messages,...pre_messages]);
+    
+    // append(msg, { options: {  } });
 
-  
+  };
+  console.log(messages);
+  console.log("users_message_count: " + users_message_count);
+
 
   return (
     <>
@@ -75,17 +100,18 @@ const AI_Chat: NextPage = () => {
               <div ref={messagesEndRef} />
             </div>
           </div>
-          {users_message_count < 3 && (
-          <PromptSuggestionRow onPromptClick={handlePrompt} prompt_index={users_message_count} />
-        )}
+          {users_message_count < 2 && (
+            <PromptSuggestionRow onPromptClick={handlePrompt} prompt_index={users_message_count} />
+          )}
           <form className='flex h-[40px] gap-2' onSubmit={handleSend}>
             <input
               onChange={handleInputChange}
               value={input}
               className='chatbot-input flex-1 text-sm md:text-base outline-none bg-transparent rounded-md p-2'
-              placeholder='Send a message...'
+              placeholder='Input disabled, Please use the suggest prompt first...'
+              disabled
             />
-            <button type="submit" className='chatbot-send-button flex rounded-md items-center justify-center px-2.5 origin:px-3'>
+            <button disabled type="submit" className='chatbot-send-button flex rounded-md items-center justify-center px-2.5 origin:px-3'>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z" />
               </svg>
