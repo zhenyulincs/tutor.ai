@@ -1,5 +1,10 @@
+import React from 'react';
 
-const PromptSuggestionButton = ({ text, onClick }) => {
+interface PromptSuggestionButtonProps {
+  text: string;
+  onClick: () => void;  // Assuming onClick does not expect any arguments and doesn't return anything
+}
+const PromptSuggestionButton: React.FC<PromptSuggestionButtonProps> = ({ text, onClick }) => {
   return (
     <button
       onClick={onClick}

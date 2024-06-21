@@ -1,4 +1,18 @@
-const Dropdown = ({ fieldId, label, options, value, onSelect }) => {
+import React from 'react';
+
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface DropdownProps {
+  fieldId: string;
+  label?: string;
+  options: Option[];
+  value: string;
+  onSelect: (value: string) => void;
+}
+const Dropdown:React.FC<DropdownProps>  = ({ fieldId, label, options, value, onSelect }) => {
   return (
     <div className="relative inline-block w-full text-gray-700">
       {label && (

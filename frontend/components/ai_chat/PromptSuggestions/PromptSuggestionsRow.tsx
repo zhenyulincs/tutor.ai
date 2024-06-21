@@ -1,6 +1,14 @@
+import React from 'react';
+
 import PromptSuggestionButton from "./PromptSuggestionButton";
 
-const PromptSuggestionRow = ({ onPromptClick,prompt_index }) => {
+
+interface PromptSuggestionRowProps {
+  onPromptClick: (promptText: string) => void;  // Assuming this function takes an index and does not return anything
+  prompt_index: number;
+}
+
+const PromptSuggestionRow : React.FC<PromptSuggestionRowProps> = ({ onPromptClick,prompt_index }) => {
   const prompts = [
     [
     'ENGR 213',

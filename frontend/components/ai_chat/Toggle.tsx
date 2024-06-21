@@ -1,4 +1,12 @@
-const Toggle = ({ enabled, label, onChange }) => {
+import React, { ChangeEvent } from 'react';
+
+interface ToggleProps {
+  enabled: boolean;  // True if the toggle is on, false if off
+  label?: string;    // Optional label for the toggle
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void; // Function to call on toggle change, expecting the new state
+}
+
+const Toggle: React.FC<ToggleProps> = ({ enabled, label, onChange }) => {
   return (
     <div className="flex items-center justify-center w-full self-end">
       <label htmlFor="toggle" className="flex items-center cursor-pointer py-2">
