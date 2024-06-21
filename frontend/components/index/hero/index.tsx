@@ -1,13 +1,11 @@
-import { Button, Divider, Input, Text } from '@nextui-org/react';
+import { Button, Divider, Link, Input, Text } from '@nextui-org/react';
 import React from 'react';
-import { CheckIcon } from '../../icons/CheckIcon';
 import { Box } from '../../styles/box';
 import { Flex } from '../../styles/flex';
 import Typewriter from 'typewriter-effect';
-import styles from './hero.module.css';
 export const Hero = () => {
    return (
-      
+
       <>
          <Flex
             css={{
@@ -55,7 +53,7 @@ export const Hero = () => {
                   >
                      Tutor.ai turns your  {' '}
                   </Text>
-                  
+
                   <Text
                      h1
                      css={{
@@ -65,7 +63,7 @@ export const Hero = () => {
                      <Typewriter
                         options={{
                            strings: [
-                              'Course', 
+                              'Course',
                               'Homework',
                               "Quizzes"
                            ],
@@ -73,7 +71,7 @@ export const Hero = () => {
                            loop: true,
                            skipAddStyles: true
                         }}
-                        
+
                      />
                      {' '}
                   </Text>
@@ -108,7 +106,19 @@ export const Hero = () => {
                   }}
                   wrap={'wrap'}
                >
-                  <Button>Get Started</Button>
+                  <Button>
+                     <Link
+                        color="inherit"
+                        css={{
+                           minWidth: '100%',
+                        }}
+                        target="_blank"
+                        href="ai_chat"
+                     >
+                        Get Started
+                     </Link>
+
+                  </Button>
                </Flex>
 
             </Box>
