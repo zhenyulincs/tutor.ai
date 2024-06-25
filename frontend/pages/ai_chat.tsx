@@ -37,13 +37,14 @@ const AI_Chat: NextPage = () => {
   ]
 
   const { append, messages, input, handleInputChange, handleSubmit, setMessages } = useChat(
-    { api: "api/mistral", initialMessages: init_messages }
+    { api: "http://127.0.0.1:5000/api/ai", initialMessages: init_messages, streamMode: 'text'}
   );
 
   const users_message_count = messages.filter(item => item.role === 'user').length;
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
+    console.log(messagesEndRef.current)
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -52,27 +53,31 @@ const AI_Chat: NextPage = () => {
   }, [messages]);
 
   const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
-    const msg: Message = { id: crypto.randomUUID(), content: input, role: 'user' };
-
-    // messages.push(msg);
-    // handleSubmit(e, { options: { body: {input} } });
+    handleSubmit(e, { options: {  } });
   };
 
   const handlePrompt = async (promptText: string) => {
     const msg: Message = { id: crypto.randomUUID(), content: promptText, role: 'user' };
+    
     pre_messages.push(msg);
     if (users_message_count == 0) {
       pre_messages.push(...functionality_question(msg.content));
+      setMessages([...messages,...pre_messages]);
     } else if (users_message_count == 1) {
       pre_messages.push(...connecting_message);
+      setMessages([...messages,...pre_messages]);
+      const handshake_message: Message = { id: crypto.randomUUID(), content: "Hi, Introduce who you are?", role: 'user' };
+      append(handshake_message, { options: {  } });
     }
-    setMessages([...messages,...pre_messages]);
     
-    // append(msg, { options: {  } });
+    else {
+      append(msg, { options: {  } });
+    }
+    
+    
 
   };
-  console.log(messages);
-  console.log("users_message_count: " + users_message_count);
+  
 
 
   return (
@@ -97,7 +102,7 @@ const AI_Chat: NextPage = () => {
               {messages.map((message, index) => (
                 <Bubble key={`message-${index}`} content={message} />
               ))}
-              <div ref={messagesEndRef} />
+              <div className="block mt-4 md:mt-6 pb-[7px] clear-both float-left"  ref={messagesEndRef} />
             </div>
           </div>
           {users_message_count < 2 && (
@@ -109,9 +114,9 @@ const AI_Chat: NextPage = () => {
               value={input}
               className='chatbot-input flex-1 text-sm md:text-base outline-none bg-transparent rounded-md p-2'
               placeholder='Input disabled, Please use the suggest prompt first...'
-              disabled
+              
             />
-            <button disabled type="submit" className='chatbot-send-button flex rounded-md items-center justify-center px-2.5 origin:px-3'>
+            <button type="submit" className='chatbot-send-button flex rounded-md items-center justify-center px-2.5 origin:px-3'>
               <svg width="20" height="20" viewBox="0 0 20 20">
                 <path d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z" />
               </svg>
