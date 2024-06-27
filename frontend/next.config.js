@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
-  exportTrailingSlash: true,
+
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
