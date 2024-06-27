@@ -277,7 +277,7 @@ export const Nav = () => {
                      minWidth: '100%',
                   }}
                   target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
+                  href="https://github.com/zhenyulincs/tutor.ai"
                >
                   <GithubIcon />
                </Link>
