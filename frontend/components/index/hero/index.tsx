@@ -96,8 +96,9 @@ export const Hero = () => {
                   size={'$lg'}
                   span
                >
-                  The easiest way to build React Landing page in seconds. Save
-                  time and focus on your project.
+                  Curating a learning experience for you, for any subject,
+                  using AI.
+                  
                </Text>
 
                <Flex
@@ -117,7 +118,7 @@ export const Hero = () => {
                      href="ai_chat"
                   >
                      <Button>
-                        Get Started
+                        Try Tutor.ai
                      </Button>
                   </Link>
 
