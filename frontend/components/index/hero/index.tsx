@@ -64,7 +64,7 @@ export const Hero = () => {
                      <Typewriter
                         options={{
                            strings: [
-                              'Course',
+                              'Courses',
                               'Homework',
                               "Quizzes"
                            ],
@@ -129,12 +129,12 @@ export const Hero = () => {
             <Box
                css={{
                   '& img': {
-                     width: '775px',
+                     width: '750px',
                      objectFit: 'contain',
                   },
                }}
             >
-               <img src="mock.png" />
+               <img src="sample.png" alt="sample image"/>
             </Box>
          </Flex>
          <Divider
