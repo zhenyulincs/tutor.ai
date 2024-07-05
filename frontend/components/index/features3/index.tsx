@@ -13,6 +13,7 @@ export const Features3 = () => {
             css={{
                'gap': '1rem',
                'pt': '$9',
+
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
@@ -38,6 +39,7 @@ export const Features3 = () => {
                      color: '$accents8',
                   }}
                >
+
                   Tutor.ai provides both assessment preparation and review resources,
                   helping the student user refresh or strengthen their knowledge in their class topics.
                </Text>
@@ -62,6 +64,7 @@ export const Features3 = () => {
                      >
                         Our model can generate preparational content based on subject and topic
                         the end user is being assessed on, such as a mock exam.  
+
                      </Text>
                   </Flex>
                </Flex>
@@ -89,13 +92,16 @@ export const Features3 = () => {
                   </Flex>
                </Flex>
    
+
             </Flex>
             <Flex align={'center'}>
                <FeatureIcon />
             </Flex>
          </Flex>
          <Divider
+
             css={{position: 'absolute', inset: '0p', left: '0', mt: '$1'}}
+
          />
       </>
    );

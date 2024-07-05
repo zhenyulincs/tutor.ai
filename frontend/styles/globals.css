@@ -99,6 +99,7 @@ h6 {
   font-weight: var(--nextui-fontWeights-semibold)
 }
 
+
 li {
   font-size: 15.5px;
   text-indent: 40px;
@@ -123,6 +124,7 @@ li {
   height: 125px;
   width: 125px;
 }
+
 
  .chatbot-section {
    background-color: var(--text-primary);

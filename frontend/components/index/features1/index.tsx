@@ -17,6 +17,7 @@ export const Features1 = () => {
                'alignItems': 'center',
                'px': '$6',
 
+
                '@sm': {
                   justifyContent: 'space-around',
                   px: '$32',
@@ -41,6 +42,7 @@ export const Features1 = () => {
                >
                   Tutor.ai looks through course material or student user prompts, 
                   and answers accordingly to the student user&apos;s needs. 
+
                </Text>
 
                <Flex
@@ -84,6 +86,7 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
+
                         Our model is able to summarize course topics and material, 
                         providing the adequate recommended resources for the student to review on
                         prior and during enrollment in the class.
@@ -97,7 +100,9 @@ export const Features1 = () => {
             </Flex>
          </Flex>
          <Divider
+
             css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
+
          />
       </>
    );

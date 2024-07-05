@@ -19,6 +19,7 @@ export const Trusted = () => {
          >
             <Text h1 css={{textAlign: 'center'}}>
                Your potential: Unlocked.
+
             </Text>
             <Text
                css={{
@@ -75,7 +76,9 @@ export const Trusted = () => {
          </Flex>
 
          <Divider
+
             css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
+
          />
       </>
    );

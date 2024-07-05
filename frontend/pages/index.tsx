@@ -7,6 +7,7 @@ import {Box} from '../components/styles/box';
 import {Features1} from '../components/index/features1';
 import {Features2} from '../components/index/features2';
 import {Features3} from '../components/index/features3';
+
 //
 import {Statistics} from '../components/index/technologies';
 //import {Plans} from '../components/index/plans';

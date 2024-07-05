@@ -28,9 +28,11 @@ export const Faq = () => {
                      textAlign: 'center',
                   }}
                >
+
                   Commonly asked questions about Tutor.ai&apos;s functionality, user-end experience, and subject comprehension.
                </Text>
             </Flex>
+
             <Flex
                css={{
                   'gap': '$10',
@@ -44,7 +46,9 @@ export const Faq = () => {
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
+
                         How does Tutor.ai work?
+
                      </Text>
                      <Text
                         span
@@ -52,8 +56,10 @@ export const Faq = () => {
                            color: '$accents8',
                         }}
                      >
+
                         Tutor.ai is a virtual assistant powered by artificial intelligence designed to help students with their studies. 
                         It can answer questions, explain concepts, provide resources, and offer practice problems.
+
                      </Text>
                      <Text
                         span
@@ -62,6 +68,7 @@ export const Faq = () => {
                         }}
                      >
                         Tutor.ai can engage in natural language conversations, understand context, and provide accurate and relevant responses to a wide range of academic inquiries. 
+
                      </Text>
                   </Flex>
                </Flex>
@@ -71,6 +78,7 @@ export const Faq = () => {
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
                         What devices can I use to access Tutor.ai?
+
                      </Text>
                      <Text
                         span
@@ -80,6 +88,7 @@ export const Faq = () => {
                      >
                         Tutor.ai is designed for both flexibility and accessibility, making it available on various devices. 
                         You can access it on smartphones (both Android and iOS), tablets, laptops, and desktop computers.
+
                      </Text>
                      <Text
                         span
@@ -88,6 +97,7 @@ export const Faq = () => {
                         }}
                      >
                         This cross-platform compatibility ensures that you can get help whenever and wherever you need it, whether you’re at home, in a library, or commuting.
+
                      </Text>
                   </Flex>
                </Flex>
@@ -96,6 +106,7 @@ export const Faq = () => {
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
+
                         Is Tutor.ai available 24/7?
                      </Text>
                      <Text
@@ -158,6 +169,7 @@ export const Faq = () => {
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
                         Can Tutor.ai explain complex concepts?
+
                      </Text>
                      <Text
                         span
@@ -168,6 +180,7 @@ export const Faq = () => {
                         Tutor.ai is specifically designed to explain complex concepts in a clear and understandable manner. 
                         It can break down difficult topics into smaller, more manageable parts and 
                         use analogies, examples, and step-by-step explanations to aid comprehension. 
+
                      </Text>
                      <Text
                         span
@@ -214,11 +227,13 @@ export const Faq = () => {
                </Flex>
                
 
+
                <Flex css={{gap: '$5'}} justify={'center'}>
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
                         What if Tutor.ai doesn't understand my question?
+
                      </Text>
                      <Text
                         span
@@ -230,6 +245,7 @@ export const Faq = () => {
                         try rephrasing it with simpler or clearer language, providing additional context, and 
                         checking for any typos or grammatical errors. 
                         Using relevant keywords and referring to examples or similar problems can also help. 
+
                      </Text>
                      <Text
                         span
@@ -237,6 +253,8 @@ export const Faq = () => {
                            color: '$accents8',
                         }}
                      >
+
+
 
                      </Text>
                   </Flex>
