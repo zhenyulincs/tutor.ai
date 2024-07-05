@@ -231,7 +231,7 @@ export const Faq = () => {
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
-                        What if Tutor.ai doesn't understand my question?
+                        What if Tutor.ai doesn&apos;t understand my question?
 
                      </Text>
                      <Text
@@ -240,7 +240,7 @@ export const Faq = () => {
                            color: '$accents8',
                         }}
                      >
-                        If Tutor.ai doesn't understand your question, 
+                        If Tutor.ai doesn&apos;t understand your question, 
                         try rephrasing it with simpler or clearer language, providing additional context, and 
                         checking for any typos or grammatical errors. 
                         Using relevant keywords and referring to examples or similar problems can also help. 
