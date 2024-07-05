@@ -4,10 +4,8 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ "main" , "development"]
   pull_request:
-    branches: [ "main" , "development"]
+    branches: ["development"]
   workflow_dispatch:
 
 jobs:
@@ -45,14 +43,4 @@ jobs:
       run: npm run build --if-present
       working-directory: ${{ env.working-directory }}
 
-    - name: deploy file
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      
-      with:
-          username: ${{ secrets.SERVERUSERNAME }}
-          server: ${{ secrets.SERVERIP }}
-          password: ${{ secrets.SERVERPASSWORD }}
-          local_path: ${{env.output-build}}
-          remote_path: ${{env.remote-directory}}
-          sftpArgs: '-o ConnectTimeout=5'
-          sftp_only: true
+
