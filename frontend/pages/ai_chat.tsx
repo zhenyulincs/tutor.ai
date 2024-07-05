@@ -22,7 +22,7 @@ const AI_Chat: NextPage = () => {
     return [
       {
         id: crypto.randomUUID(),
-        content: `Great, you are taking ${selected_class}, What bring you in today?`,
+        content: `Great, you are taking ${selected_class}, what brings you in today?`,
         role: 'assistant'
       }
     ];
@@ -31,7 +31,7 @@ const AI_Chat: NextPage = () => {
   const connecting_message : Message[] = [
     {
       id: crypto.randomUUID(),
-      content: `Great, connecting you to the backend AI Service, given an moment...`,
+      content: `Great, connecting you to the backend AI Service, give us one moment...`,
       role: 'assistant'
     }
   ]
@@ -66,7 +66,7 @@ const AI_Chat: NextPage = () => {
     } else if (users_message_count == 1) {
       pre_messages.push(...connecting_message);
       setMessages([...messages,...pre_messages]);
-      const handshake_message: Message = { id: crypto.randomUUID(), content: "Hi, Introduce who you are?", role: 'user' };
+      const handshake_message: Message = { id: crypto.randomUUID(), content: "Hello, can you introduce yourself?", role: 'user' };
       append(handshake_message, { options: {  } });
     }
     
