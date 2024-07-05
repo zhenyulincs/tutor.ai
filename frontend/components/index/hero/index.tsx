@@ -14,7 +14,7 @@ export const Hero = () => {
                'flexDirection': 'column',
                'alignContent': 'center',
                'justifyContent': 'center',
-               'alignItems': 'center',
+               'alignItems': 'center', 
                'width': '100%',
                '@sm': {
                   flexDirection: 'row',

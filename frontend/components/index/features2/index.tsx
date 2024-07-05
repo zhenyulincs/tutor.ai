@@ -38,8 +38,8 @@ export const Features2 = () => {
                      color: '$accents8',
                   }}
                >
-                  Tutor.ai is able to go beneath the surface level of the user's course,
-                  and provide subject-specific support and resources based on the user's prompt.
+                  Tutor.ai is able to go beneath the surface level of the user&apos;s course,
+                  and provide subject-specific support and resources based on the user&apos;s prompt.
                </Text>
 
                <Flex
@@ -67,9 +67,8 @@ export const Features2 = () => {
                               color: '$accents8',
                            }}
                         >
-                           Our model allows students to query about upcoming topics for the purpose of preparation,
-                           and provide 
-                           and personalized study plans based on the course subject for any upcoming homework, quiz, or test.
+                           Our model allows students to query about upcoming topics for the purpose of preparation
+                           and provide personalized study plans based on the course subject for any upcoming homework, quiz, or test.
                         </Text>
                      </Flex>
                   </Flex>
