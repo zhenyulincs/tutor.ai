@@ -259,7 +259,7 @@ export const Faq = () => {
                   </Flex>
                </Flex>
             </Flex>
-         </Flex>
+         </Flex> 
  
          <Divider
             css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
