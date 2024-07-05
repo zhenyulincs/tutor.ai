@@ -96,8 +96,7 @@ export const Faq = () => {
                            color: '$accents8',
                         }}
                      >
-                        This cross-platform compatibility ensures that you can get help whenever and wherever you need it, whether you’re at home, in a library, or commuting.
-
+                        This cross-platform compatibility ensures that you can get help whenever and wherever you need it, whether you&apos;re at home, in a library, or commuting.
                      </Text>
                   </Flex>
                </Flex>
@@ -125,7 +124,7 @@ export const Faq = () => {
                            color: '$accents8',
                         }}
                      >
-                        Whether you’re studying late at night, early in the morning, or during a weekend, the AI chatbot tutor is always ready to assist. 
+                        Whether you&apos;re studying late at night, early in the morning, or during a weekend, the AI chatbot tutor is always ready to assist. 
                         This ensures that learning and academic support are continuous and not restricted by traditional tutoring hours.
                      </Text>
                   </Flex>
@@ -219,7 +218,7 @@ export const Faq = () => {
                      >
                         For instance, instead of asking “Can you help me with math?”, 
                         a more specific question like “How do you solve quadratic equations using the quadratic formula?” 
-                        will yield a more targeted and useful answer. However, if you’re 
+                        will yield a more targeted and useful answer. However, if you&apos;re 
                         unsure about how to phrase your question, the AI can guide you 
                         by asking follow-up questions to narrow down your query and provide the best possible assistance.
                      </Text>
