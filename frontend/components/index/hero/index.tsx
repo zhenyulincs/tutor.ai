@@ -14,7 +14,7 @@ export const Hero = () => {
                'flexDirection': 'column',
                'alignContent': 'center',
                'justifyContent': 'center',
-               'alignItems': 'center',
+               'alignItems': 'center', 
                'width': '100%',
                '@sm': {
                   flexDirection: 'row',
@@ -64,7 +64,7 @@ export const Hero = () => {
                      <Typewriter
                         options={{
                            strings: [
-                              'Course',
+                              'Courses',
                               'Homework',
                               "Quizzes"
                            ],
@@ -96,8 +96,9 @@ export const Hero = () => {
                   size={'$lg'}
                   span
                >
-                  The easiest way to build React Landing page in seconds. Save
-                  time and focus on your project.
+                  Curating a learning experience for you, for any subject,
+                  using AI.
+                  
                </Text>
 
                <Flex
@@ -117,7 +118,7 @@ export const Hero = () => {
                      href="ai_chat"
                   >
                      <Button>
-                        Get Started
+                        Try Tutor.ai
                      </Button>
                   </Link>
 
@@ -128,12 +129,12 @@ export const Hero = () => {
             <Box
                css={{
                   '& img': {
-                     width: '775px',
+                     width: '750px',
                      objectFit: 'contain',
                   },
                }}
             >
-               <img src="mock.png" />
+               <img src="sample.png" alt="sample image"/>
             </Box>
          </Flex>
          <Divider

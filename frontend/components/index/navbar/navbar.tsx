@@ -186,13 +186,13 @@ export const Nav = () => {
                            key="Prepare for Class"
                            icon={icons.server}
                         >
-                           Prepare for Class
+                           Class Preparation
                         </Dropdown.Item>
                         <Dropdown.Item
                            key="Review After Class"
                            icon={icons.server}
                         >
-                           Review After Class
+                           Class Review
                         </Dropdown.Item>
                      </Dropdown.Section>
                      <Dropdown.Section title="AI Asking">
@@ -215,7 +215,7 @@ export const Nav = () => {
                            key="Paractice Generation"
                            icon={icons.server}
                         >
-                           Paractice Generation
+                           AI Generated Practice
                         </Dropdown.Item>
                         <Dropdown.Item
                            key="Knowledge Gap Analysis"
@@ -253,7 +253,7 @@ export const Nav = () => {
                      minWidth: '100%',
                   }}
                   target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
+                  href="https://github.com/zhenyulincs/tutor.ai"
                >
                   <GithubIcon />
                </Link>
@@ -277,7 +277,7 @@ export const Nav = () => {
                      minWidth: '100%',
                   }}
                   target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
+                  href="https://github.com/zhenyulincs/tutor.ai"
                >
                   <GithubIcon />
                </Link>

@@ -1,5 +1,5 @@
-archive/
-vector_storage/
-*.pdf
-*.pyc
 rag*
+*.pdf
+archive
+vector_storage
+__pycache__
