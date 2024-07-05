@@ -28,9 +28,9 @@ export const Features1 = () => {
          >
             <Flex direction="column">
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  Feature 1
                </Text>
-               <Text h3>Your title here</Text>
+               <Text h3>Learning with Artificial Intelligence</Text>
                <Text
                   span
                   css={{
@@ -38,10 +38,9 @@ export const Features1 = () => {
                      color: '$accents8',
                   }}
                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-                  nec tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
-                  lacinia,
+                  Tutor.ai analyzes user input, 
+                  and accordingly searches and recommends high quality educational content 
+                  based on what the user needs or wants to learn about.
                </Text>
 
                <Flex
@@ -53,7 +52,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Your title here
+                        Course Preparation
                      </Text>
                      <Text
                         span
@@ -62,9 +61,9 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
+                        Tutor.ai can create learning plans, recommend specific sources,
+                        or provide visual explanations based on the user prompt, providing a high-quality, 
+                        personalized learning experience on the user-end.
                      </Text>
                   </Flex>
                </Flex>
@@ -77,7 +76,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Your title here
+                        Course Review
                      </Text>
                      <Text
                         span
@@ -86,9 +85,8 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
+                        Our model is able to summarize lectures, generate practice tests and quizzes,
+                        and provide resources to provide support for any knowledge gap the end-user has in their specific class.
                      </Text>
                   </Flex>
                </Flex>

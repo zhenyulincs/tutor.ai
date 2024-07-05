@@ -28,9 +28,9 @@ export const Features2 = () => {
          >
             <Flex direction="column" align={'center'}>
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  Feature 2
                </Text>
-               <Text h3>Your title here</Text>
+               <Text h3>Asking AI Questions Related to Course Subject</Text>
                <Text
                   span
                   css={{
@@ -38,10 +38,8 @@ export const Features2 = () => {
                      color: '$accents8',
                   }}
                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-                  nec tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
-                  lacinia,
+                  Tutor.ai is able to go beneath the surface level of the user's course,
+                  and provide subject-specific support and resources based on the user's prompt.
                </Text>
 
                <Flex
@@ -54,13 +52,13 @@ export const Features2 = () => {
                   <Flex
                      css={{
                         py: '$10',
-                        gap: '$5',
+                        gap: '$6',
                      }}
                   >
                      <BoxIcon />
                      <Flex direction={'column'}>
                         <Text h4 weight={'medium'}>
-                           Your title here
+                           Topic-specific Preparation
                         </Text>
                         <Text
                            span
@@ -69,9 +67,9 @@ export const Features2 = () => {
                               color: '$accents8',
                            }}
                         >
-                           Lorem ipsum dolor sit amet, consectetur adipiscing
-                           elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                           nisl aliquet nisl,
+                           Our model allows students to query about upcoming topics for the purpose of preparation,
+                           and provide 
+                           and personalized study plans based on the course subject for any upcoming homework, quiz, or test.
                         </Text>
                      </Flex>
                   </Flex>
@@ -84,18 +82,18 @@ export const Features2 = () => {
                      <BoxIcon />
                      <Flex direction={'column'}>
                         <Text h4 weight={'medium'}>
-                           Your title here
+                           Topic-specific Review
                         </Text>
                         <Text
                            span
                            css={{
-                              maxWidth: '325px',
+                              maxWidth: '330px',
                               color: '$accents8',
                            }}
                         >
-                           Lorem ipsum dolor sit amet, consectetur adipiscing
-                           elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                           nisl aliquet nisl,
+                           Our model allows the end-user to query for the explanation of difficult course-related subjects,
+                           clarification on incorrect answers, and strategies to improve performance based on previous assessments.
+                           
                         </Text>
                      </Flex>
                   </Flex>
