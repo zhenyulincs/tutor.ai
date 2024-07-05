@@ -12,7 +12,7 @@ export const Features3 = () => {
             direction={'column'}
             css={{
                'gap': '1rem',
-               'pt': '$20',
+               'pt': '$9',
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
@@ -38,9 +38,8 @@ export const Features3 = () => {
                      color: '$accents8',
                   }}
                >
-                  Tutor.ai analyzes user input, 
-                  and accordingly searches and recommends high quality educational content 
-                  based on what the user needs or wants to learn about.
+                  Tutor.ai provides both assessment preparation and review resources,
+                  helping the student user refresh or strengthen their knowledge in their class topics.
                </Text>
 
                <Flex
@@ -61,9 +60,8 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Tutor.ai can create learning plans, recommend specific sources,
-                        or provide visual explanations based on the user prompt, providing a high-quality, 
-                        personalized learning experience on the user-end.
+                        Our model can generate preparational content based on subject and topic
+                        the end user is being assessed on, such as a mock exam.  
                      </Text>
                   </Flex>
                </Flex>
@@ -85,42 +83,19 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model is able to summarize lectures, generate practice tests and quizzes,
-                        and provide resources to provide support for any knowledge gap the end-user has in their specific class.
+                        Our model analyzes the strengths and weaknesses in the student user&apos;s knowledge on specific topics
+                        in tandem to the assessment material, helping the student user fill in any of their knowledge gaps.
                      </Text>
                   </Flex>
                </Flex>
-               <Flex
-                  css={{
-                     py: '$10',
-                     gap: '$5',
-                  }}
-               >
-                  <BoxIcon />
-                  <Flex direction={'column'}>
-                     <Text h4 weight={'medium'}>
-                        Your title here
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           maxWidth: '400px',
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
-                     </Text>
-                  </Flex>
-               </Flex>
+   
             </Flex>
             <Flex align={'center'}>
                <FeatureIcon />
             </Flex>
          </Flex>
          <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
+            css={{position: 'absolute', inset: '0p', left: '0', mt: '$1'}}
          />
       </>
    );

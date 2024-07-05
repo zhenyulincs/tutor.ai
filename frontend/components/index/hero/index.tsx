@@ -138,7 +138,7 @@ export const Hero = () => {
             </Box>
          </Flex>
          <Divider
-            css={{ position: 'absolute', inset: '0p', left: '0', mt: '$10' }}
+            css={{ position: 'absolute', inset: '0p', left: '0', mt: '$16' }}
          />
       </>
    );
