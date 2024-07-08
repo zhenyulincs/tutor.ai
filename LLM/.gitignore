@@ -1,4 +1,4 @@
-rag*
+*.ipynb
 *.pdf
 archive
 vector_storage

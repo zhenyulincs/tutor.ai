@@ -7,6 +7,7 @@ from llama_index.core import Document, StorageContext
 from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
+from page_index import get_chapter_title
 
 import pytesseract
 import PyPDF2
@@ -52,13 +53,15 @@ def pdf_to_text(reader, read_page):
 
     return text
 
-def save_dataset(filename,documents,embeddings_dim):
-    node_parser = SentenceSplitter(chunk_size=512, chunk_overlap=20)
+def save_dataset(filename,documents):
+    node_parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
     nodes = node_parser.get_nodes_from_documents(
         documents, show_progress=True
     )
+    
     index = VectorStoreIndex(nodes)
     index.storage_context.persist(persist_dir=filename)
+
         
         
 
@@ -74,20 +77,22 @@ Settings.embed_model = embed_model
 
 record_counter = 0
 documents = []
-for read_page in tqdm(range(26,total_page)):
+for read_page in tqdm(range(total_page)):
     
     pdf_txt = pdf_to_text(pdf_reader,read_page)
-
+    chapter_title = get_chapter_title(read_page + 1)
+    document = Document(text=pdf_txt, metadata={"Chapter_title": chapter_title})
     try:
-        documents.append(Document(text=pdf_txt))
+        
+        documents.append(document)
         record_counter+=1
     except Exception as e:
         print(f"GPT Response Error{e}")
         continue
     
     if record_counter % 5 == 0:
-        save_dataset(f"LLM/vector_storage/C_Programming_textbok_p{read_page}",documents,embeddings_dim)
+        save_dataset(f"LLM/vector_storage/C_Programming_textbok_p{read_page}",documents)
         documents = []
 
-save_dataset(f"LLM/vector_storage/C_Programming_textbok_p{read_page}",documents,embeddings_dim)
+save_dataset(f"LLM/vector_storage/C_Programming_textbok_p{read_page}",documents)
 pdf_reader.stream.close()
