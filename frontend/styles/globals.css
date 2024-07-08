@@ -99,6 +99,33 @@ h6 {
   font-weight: var(--nextui-fontWeights-semibold)
 }
 
+
+li {
+  font-size: 15.5px;
+  text-indent: 40px;
+}
+
+.language {
+  height: auto;
+  width: 125px;
+}
+
+.framework-react {
+  height: auto;
+  width: 125px;
+}
+
+.framework-nextjs {
+  height: auto;
+  width: 125px;
+}
+
+.model {
+  height: 125px;
+  width: 125px;
+}
+
+
  .chatbot-section {
    background-color: var(--text-primary);
    box-shadow: var(--shadow-primary);
