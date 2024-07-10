@@ -1,8 +1,9 @@
-import {Button, Divider, Text} from '@nextui-org/react';
+
+import { Button, Divider, Text } from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../../icons/BoxIcon';
-import {FeatureIcon} from '../../icons/FeatureIcon';
-import {Flex} from '../../styles/flex';
+import { BoxIcon } from '../../icons/BoxIcon';
+import { FeatureIcon } from '../../icons/FeatureIcon';
+import { Flex } from '../../styles/flex';
 
 export const Features2 = () => {
    return (
@@ -11,7 +12,9 @@ export const Features2 = () => {
             direction={'column'}
             css={{
                'gap': '1rem',
-               'pt': '$20',
+
+               'pt': '$10',
+
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
@@ -27,7 +30,8 @@ export const Features2 = () => {
             }}
          >
             <Flex direction="column" align={'center'}>
-               <Text span css={{color: '$blue600'}}>
+               <Text span css={{ color: '$blue600' }}>
+
                   Feature 2
                </Text>
                <Text h3>Asking AI Questions Related to Course Subject</Text>
@@ -92,7 +96,8 @@ export const Features2 = () => {
                         >
                            Our model allows the end-user to query for the explanation of difficult course-related subjects,
                            clarification on incorrect answers, and strategies to improve performance based on previous assessments.
-                           
+
+
                         </Text>
                      </Flex>
                   </Flex>
@@ -104,8 +109,14 @@ export const Features2 = () => {
          </Flex>
 
          <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
+            css={{
+               position: 'absolute',
+               inset: '1p',
+               left: '0',
+               mt: '$2', 
+            }}
          />
       </>
    );
 };
+
