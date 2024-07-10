@@ -16,6 +16,9 @@ from llama_index.core.base.llms.types import ChatMessage, MessageRole
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.core.retrievers import VectorIndexAutoRetriever
 from llama_index.core.vector_stores import MetadataInfo, VectorStoreInfo
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
 from page_index import get_all_chapter_title
 from youtube import YouTubeSearcher
 import os
@@ -50,8 +53,8 @@ class rag():
         indexes = VectorStoreIndex([])
 
         bm25_indexes = []
-        vector_storages_path_list = os.listdir("LLM/vector_storage")
-        vector_storages_path_list = [os.path.join("LLM/vector_storage",vector_storages_path) for vector_storages_path in vector_storages_path_list]
+        vector_storages_path_list = os.listdir("../LLM/vector_storage")
+        vector_storages_path_list = [os.path.join("../LLM/vector_storage",vector_storages_path) for vector_storages_path in vector_storages_path_list]
 
         for vector_storages_path in vector_storages_path_list:
             
@@ -88,6 +91,7 @@ class rag():
                 role="system", 
                 content="""Your name is WisdomWhiz, you are a expert of C programming tutor. 
                 All the Question you should reference on the book C Programming A moderm approch. 
+                You should only answer questions in JSON format without additiona information
                 """
                 )
             ]
@@ -99,29 +103,32 @@ class rag():
         )
         self.chat_history = []
 
-    def __chat(self,query):
+    def chat(self,query):
 
-        query += \
-        """
-        JSON format must only contain these 2 keys: keyword, description for the value of keyword, 
-        it must contain enough information that can be search on youtube
-        Example #1 Input :
-        [[SCHEMA]]
-        'keyword',
-        'description'
-        [[/SCHEMA]]
-        """
+        # query += \
+        # """
+        # JSON format must only contain these 2 keys: keyword, description for the value of keyword, 
+        # it must contain enough information that can be search on youtube
+        # Example #1 Input :
+        # [[SCHEMA]]
+        # 'keyword',
+        # 'description'
+        # [[/SCHEMA]]
+        # """
         response = self.chat_engine.chat(query,self.chat_history)
         self.chat_history.append(ChatMessage(role="user",content=str(response)))
-        return  str(response)
+        return str(response)
 
     def clear_chat_history(self):
         self.chat_history = []
+        
+    
 
     def get_youtube_type_response(self,query):
-        response = self.__chat(query)
-        cleaned_json_data = response.strip('```json').strip('```').strip()
-        cleaned_json_data = json.loads(cleaned_json_data)
+        response = self.chat(query)
+        print(response)
+        # cleaned_json_data = response.strip('```json').strip('```').strip()
+        cleaned_json_data = json.loads(response)
         searcher = YouTubeSearcher()
         youtube_results = []
         keywords = []
@@ -154,4 +161,5 @@ class rag():
 
 # rag = rag()
 
-# print(rag.get_youtube_type_response("Given me an learning outline for Formatted Input/Output in JSON format"))
+# print(rag.chat("Given me an learning outline for Formatted Input/Output"))
+# print(rag.get_youtube_type_response("Given me an learning outline for Formatted Input/Output"))
