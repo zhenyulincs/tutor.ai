@@ -17,7 +17,9 @@ export const Trusted = () => {
                },
             }}
          >
-            <Text h1 css={{textAlign: 'center'}}>
+            <Text h1 css={{textAlign: 'center',
+                           fontSize: '$5xl'
+            }}>
                Your potential: Unlocked.
 
             </Text>
@@ -51,24 +53,30 @@ export const Trusted = () => {
                <Grid sm={3} justify="center">
                   <Flex align={'center'} justify={'center'}>
                      
-                     <Text weight={'semibold'} span size={'$3xl'}>
-                        Features
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#start_of_feature'>
+                           Features
+                        </a> 
                      </Text>
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
                      
-                     <Text weight={'semibold'} span size={'$3xl'}>
-                        Technologies
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#technologies'>
+                           Technologies
+                        </a>
                      </Text>
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
                      
-                     <Text weight={'semibold'} span size={'$3xl'}>
-                        FAQ
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#faq'>
+                           FAQ
+                        </a>
                      </Text>
                   </Flex>
                </Grid>

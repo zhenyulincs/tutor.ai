@@ -8,6 +8,7 @@ export const Faq = () => {
    return (
       <>
          <Flex
+            id = 'faq'
             css={{
                py: '$20',
                gap: '$18',
