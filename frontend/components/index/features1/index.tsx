@@ -58,6 +58,7 @@ export const Features1 = () => {
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
                         Course Preparation
+                        Course Preparation
                      </Text>
                      <Text
                         span
