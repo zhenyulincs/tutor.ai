@@ -15,12 +15,15 @@ export const Trusted = () => {
                '@md': {
                   px: '$64',
                },
+               'pb': '$11'
+
             }}
          >
             <Text h1 css={{textAlign: 'center',
-                           fontSize: '$5xl'
+                           fontSize: '$6xl'
             }}>
-               Your potential: Unlocked.
+               Empowering students to excel academically through personalized AI-driven support.
+
 
             </Text>
             <Text
@@ -28,13 +31,16 @@ export const Trusted = () => {
                   color: '$accents8',
                   maxWidth: '800px',
                   textAlign: 'center',
+                  'pt': '$8'
                }}
                weight="normal"
-               size={'$3xl'}
+               size={'$2xl'}
             >
-               Tutor.ai accomodates your academic journey, 
-               allowing you to better personalize your own learning experience, 
-               furthing your success in any subject of your choice.
+               Tutor.AI revolutionizes learning with features like the Smart Study Guide,
+               AI-Powered Q&A, and Assessment Prep Pro. Our platform adapts to each student's needs, 
+               offering targeted resources, instant answers, and effective exam preparation, 
+               making academic success accessible and efficient.
+
             </Text>
             <Grid.Container
                gap={6}
@@ -47,7 +53,7 @@ export const Trusted = () => {
                   },
                   '&  span': {
                      whiteSpace: 'pre',
-                  },
+                  }
                }}
             >
                <Grid sm={3} justify="center">
@@ -55,7 +61,7 @@ export const Trusted = () => {
                      
                      <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
                         <a href='#start_of_feature'>
-                           Features
+                           Our Features
                         </a> 
                      </Text>
                   </Flex>
@@ -66,16 +72,6 @@ export const Trusted = () => {
                      <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
                         <a href='#technologies'>
                            Technologies
-                        </a>
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     
-                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
-                        <a href='#faq'>
-                           FAQ
                         </a>
                      </Text>
                   </Flex>
