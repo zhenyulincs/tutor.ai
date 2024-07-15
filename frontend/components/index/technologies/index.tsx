@@ -6,7 +6,7 @@ import {Flex} from '../../styles/flex';
 export const Statistics = () => {
    return (
       <>
-         <Box
+         <Box id = 'technologies'
             css={{
                pt: '$20',
                pb: '$16',
@@ -18,6 +18,7 @@ export const Statistics = () => {
                   h3
                   css={{
                      textAlign: 'center',
+                     fontSize: '$5xl'
                   }}
                >
                   Technologies used

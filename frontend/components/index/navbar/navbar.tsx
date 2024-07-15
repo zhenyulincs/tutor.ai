@@ -147,6 +147,11 @@ export const Nav = () => {
                         '$$dropdownItemHeight': '100px',
                         '& .nextui-dropdown-item': {
                            'py': '$2',
+                           'my': '$5',
+                           'mx': '$4',
+                           'outline': 'solid',
+                           'outline-color': 'Gray',
+                           'outlineWidth': '0.5px',
                            'svg': {
                               color: '$secondary',
                               mr: '$4',
@@ -164,8 +169,10 @@ export const Nav = () => {
                            display: 'none'
                         },
                         '& .nextui-dropdown-section': {
-                           background: '#f4f4f5',
-                           margin: "$2"
+                           //background: '#000',
+
+                           margin: '$5',
+                           'mr': '$9' 
                         },
                         '& .nextui-dropdown-section-wrapper': {
                            flex: "1 1 auto",
@@ -212,7 +219,7 @@ export const Nav = () => {
                      </Dropdown.Section>
                      <Dropdown.Section title="AI Preparation">
                         <Dropdown.Item
-                           key="Paractice Generation"
+                           key="Practice Generation"
                            icon={icons.server}
                         >
                            AI Generated Practice
