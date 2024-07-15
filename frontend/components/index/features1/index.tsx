@@ -42,7 +42,7 @@ export const Features1 = () => {
                   }}
                >
                   Our Smart Study Guide leverages advanced AI to provide personalized learning paths tailored 
-                  to each student's unique needs. This feature analyzes your strengths and weaknesses, offering 
+                  to each student&apos;s unique needs. This feature analyzes your strengths and weaknesses, offering 
                   targeted content and resources to help you master your coursework efficiently.
 
 
