@@ -1,0 +1,17 @@
+datasets
+faiss_gpu
+llama_index
+nest_asyncio
+openai
+pandas
+pdf2image
+PyPDF2
+pytesseract
+spacy
+tqdm
+wandb
+llama-index-vector-stores-faiss
+llama-index-llms-huggingface
+llama-index-embeddings-huggingface
+llama-index-retrievers-bm25
+llama-index-llms-llama-cpp
