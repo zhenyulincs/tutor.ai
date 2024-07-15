@@ -33,7 +33,6 @@ export const Faq = () => {
                   Commonly asked questions about Tutor.ai&apos;s functionality, user-end experience, and subject comprehension.
                </Text>
             </Flex>
-
             <Flex
                css={{
                   'gap': '$10',
