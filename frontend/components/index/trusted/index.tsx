@@ -17,8 +17,11 @@ export const Trusted = () => {
                },
             }}
          >
-            <Text h2 css={{textAlign: 'center'}}>
-               Trusted by over 10000+ customers
+            <Text h1 css={{textAlign: 'center',
+                           fontSize: '$5xl'
+            }}>
+               Your potential: Unlocked.
+
             </Text>
             <Text
                css={{
@@ -27,10 +30,11 @@ export const Trusted = () => {
                   textAlign: 'center',
                }}
                weight="normal"
-               size={'$lg'}
+               size={'$3xl'}
             >
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Tutor.ai accomodates your academic journey, 
+               allowing you to better personalize your own learning experience, 
+               furthing your success in any subject of your choice.
             </Text>
             <Grid.Container
                gap={6}
@@ -48,65 +52,31 @@ export const Trusted = () => {
             >
                <Grid sm={3} justify="center">
                   <Flex align={'center'} justify={'center'}>
-                     <AcmeLogo />
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 1
+                     
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#start_of_feature'>
+                           Features
+                        </a> 
                      </Text>
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 2
+                     
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#technologies'>
+                           Technologies
+                        </a>
                      </Text>
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 3
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 4
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 5
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 6
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 7
-                     </Text>
-                  </Flex>
-               </Grid>
-               <Grid sm={3} justify="center">
-                  <Flex align={'center'}>
-                     <AcmeLogo />{' '}
-                     <Text weight={'semibold'} span size={'$lg'}>
-                        Company 8
+                     
+                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
+                        <a href='#faq'>
+                           FAQ
+                        </a>
                      </Text>
                   </Flex>
                </Grid>
@@ -114,7 +84,9 @@ export const Trusted = () => {
          </Flex>
 
          <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
+
+            css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
+
          />
       </>
    );

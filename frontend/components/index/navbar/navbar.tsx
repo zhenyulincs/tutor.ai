@@ -147,6 +147,11 @@ export const Nav = () => {
                         '$$dropdownItemHeight': '100px',
                         '& .nextui-dropdown-item': {
                            'py': '$2',
+                           'my': '$5',
+                           'mx': '$4',
+                           'outline': 'solid',
+                           'outline-color': 'Gray',
+                           'outlineWidth': '0.5px',
                            'svg': {
                               color: '$secondary',
                               mr: '$4',
@@ -164,8 +169,10 @@ export const Nav = () => {
                            display: 'none'
                         },
                         '& .nextui-dropdown-section': {
-                           background: '#f4f4f5',
-                           margin: "$2"
+                           //background: '#000',
+
+                           margin: '$5',
+                           'mr': '$9' 
                         },
                         '& .nextui-dropdown-section-wrapper': {
                            flex: "1 1 auto",
@@ -186,13 +193,13 @@ export const Nav = () => {
                            key="Prepare for Class"
                            icon={icons.server}
                         >
-                           Prepare for Class
+                           Class Preparation
                         </Dropdown.Item>
                         <Dropdown.Item
                            key="Review After Class"
                            icon={icons.server}
                         >
-                           Review After Class
+                           Class Review
                         </Dropdown.Item>
                      </Dropdown.Section>
                      <Dropdown.Section title="AI Asking">
@@ -212,10 +219,10 @@ export const Nav = () => {
                      </Dropdown.Section>
                      <Dropdown.Section title="AI Preparation">
                         <Dropdown.Item
-                           key="Paractice Generation"
+                           key="Practice Generation"
                            icon={icons.server}
                         >
-                           Paractice Generation
+                           AI Generated Practice
                         </Dropdown.Item>
                         <Dropdown.Item
                            key="Knowledge Gap Analysis"
@@ -253,7 +260,7 @@ export const Nav = () => {
                      minWidth: '100%',
                   }}
                   target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
+                  href="https://github.com/zhenyulincs/tutor.ai"
                >
                   <GithubIcon />
                </Link>
@@ -277,7 +284,7 @@ export const Nav = () => {
                      minWidth: '100%',
                   }}
                   target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
+                  href="https://github.com/zhenyulincs/tutor.ai"
                >
                   <GithubIcon />
                </Link>

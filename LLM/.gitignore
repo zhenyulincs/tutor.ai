@@ -1,0 +1,5 @@
+*.ipynb
+*.pdf
+archive
+vector_storage
+__pycache__

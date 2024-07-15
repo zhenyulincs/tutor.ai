@@ -9,13 +9,16 @@ export const Features1 = () => {
    return (
       <>
          <Flex
+            id='start_of_feature'
             direction={'column'}
             css={{
                'gap': '1rem',
-               'pt': '$20',
+               'pt': '$9',
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
+
+
                '@sm': {
                   justifyContent: 'space-around',
                   px: '$32',
@@ -28,9 +31,9 @@ export const Features1 = () => {
          >
             <Flex direction="column">
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  Feature 1
                </Text>
-               <Text h3>Your title here</Text>
+               <Text h3>Learning with Artificial Intelligence</Text>
                <Text
                   span
                   css={{
@@ -38,10 +41,9 @@ export const Features1 = () => {
                      color: '$accents8',
                   }}
                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-                  nec tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
-                  lacinia,
+                  Tutor.ai looks through course material or student user prompts, 
+                  and answers accordingly to the student user&apos;s needs. 
+
                </Text>
 
                <Flex
@@ -53,7 +55,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Your title here
+                        Course Preparation
                      </Text>
                      <Text
                         span
@@ -62,9 +64,8 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
+                        Our model can create a personalized prerequisite roadmap prior to 
+                        the student user&apos;s class, recommending inuitive, high quality prepatory study resources.
                      </Text>
                   </Flex>
                </Flex>
@@ -77,7 +78,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Your title here
+                        Course Review
                      </Text>
                      <Text
                         span
@@ -86,43 +87,23 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
+
+                        Our model is able to summarize course topics and material, 
+                        providing the adequate recommended resources for the student to review on
+                        prior and during enrollment in the class.
                      </Text>
                   </Flex>
                </Flex>
-               <Flex
-                  css={{
-                     py: '$10',
-                     gap: '$5',
-                  }}
-               >
-                  <BoxIcon />
-                  <Flex direction={'column'}>
-                     <Text h4 weight={'medium'}>
-                        Your title here
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           maxWidth: '400px',
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet nisl,
-                     </Text>
-                  </Flex>
-               </Flex>
+
             </Flex>
             <Flex align={'center'}>
                <FeatureIcon />
             </Flex>
          </Flex>
          <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
+
+            css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
+
          />
       </>
    );

@@ -1,127 +1,107 @@
-import {Card, Divider, Text} from '@nextui-org/react';
+import {Divider, Grid, Text} from '@nextui-org/react';
 import React from 'react';
 import {BoxIcon} from '../../icons/BoxIcon';
+import {FeatureIcon} from '../../icons/FeatureIcon';
 import {Box} from '../../styles/box';
 import {Flex} from '../../styles/flex';
 
 export const Features3 = () => {
    return (
       <>
-         <Box
+         <Flex
+            direction={'column'}
             css={{
-               px: '$6',
-               pb: '$14',
+               'gap': '1rem',
+               'pt': '$9',
+
+               'justifyContent': 'center',
+               'alignItems': 'center',
+               'px': '$6',
+               '@sm': {
+                  justifyContent: 'space-around',
+                  px: '$32',
+                  flexDirection: 'row',
+               },
+               '@md': {
+                  px: '$64',
+               },
             }}
          >
-            <Flex
-               direction={'column'}
-               justify={'center'}
-               align={'center'}
-               css={{
-                  pt: '$20',
-               }}
-            >
+            <Flex direction="column">
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  Feature 3
                </Text>
-               <Text h3>Your title here</Text>
+               <Text h3>Using AI to Prepare for Assessments</Text>
                <Text
                   span
                   css={{
-                     maxWidth: '800px',
+                     maxWidth: '400px',
                      color: '$accents8',
-                     textAlign: 'center',
                   }}
                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-                  nec
-               </Text>
-            </Flex>
-            <Flex
-               align={'center'}
-               justify={'center'}
-               wrap={'wrap'}
-               css={{
-                  gap: '1rem',
-                  pt: '$14',
-               }}
-            >
-               <Card css={{mw: '500px'}}>
-                  <Card.Body>
-                     <Flex css={{gap: '0.5rem'}}>
-                        <BoxIcon />
-                        <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
-                           <Text span>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Sed condimentum, nisl ut aliquam lacinia,
-                              nisl nisl aliquet nisl, nec
-                           </Text>
-                        </Flex>
-                     </Flex>
-                  </Card.Body>
-               </Card>
-               <Card css={{mw: '500px'}}>
-                  <Card.Body>
-                     <Flex css={{gap: '0.5rem'}}>
-                        <BoxIcon />
-                        <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
-                           <Text span>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Sed condimentum, nisl ut aliquam lacinia,
-                              nisl nisl aliquet nisl, nec
-                           </Text>
-                        </Flex>
-                     </Flex>
-                  </Card.Body>
-               </Card>
-            </Flex>
-            <Flex
-               align={'center'}
-               wrap={'wrap'}
-               justify={'center'}
-               css={{
-                  gap: '1rem',
-                  pt: '$8',
-               }}
-            >
-               <Card css={{mw: '500px'}}>
-                  <Card.Body>
-                     <Flex css={{gap: '0.5rem'}}>
-                        <BoxIcon />
-                        <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
-                           <Text span>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Sed condimentum, nisl ut aliquam lacinia,
-                              nisl nisl aliquet nisl, nec
-                           </Text>
-                        </Flex>
-                     </Flex>
-                  </Card.Body>
-               </Card>
-               <Card css={{mw: '500px'}}>
-                  <Card.Body>
-                     <Flex css={{gap: '0.5rem'}}>
-                        <BoxIcon />
-                        <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
-                           <Text span>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Sed condimentum, nisl ut aliquam lacinia,
-                              nisl nisl aliquet nisl, nec
-                           </Text>
-                        </Flex>
-                     </Flex>
-                  </Card.Body>
-               </Card>
-            </Flex>
-         </Box>
 
+                  Tutor.ai provides both assessment preparation and review resources,
+                  helping the student user refresh or strengthen their knowledge in their class topics.
+               </Text>
+
+               <Flex
+                  css={{
+                     py: '$10',
+                     gap: '$5',
+                  }}
+               >
+                  <BoxIcon />
+                  <Flex direction={'column'}>
+                     <Text h4 weight={'medium'}>
+                        Assessment Preparation
+                     </Text>
+                     <Text
+                        span
+                        css={{
+                           maxWidth: '400px',
+                           color: '$accents8',
+                        }}
+                     >
+                        Our model can generate preparational content based on subject and topic
+                        the end user is being assessed on, such as a mock exam.  
+
+                     </Text>
+                  </Flex>
+               </Flex>
+               <Flex
+                  css={{
+                     py: '$10',
+                     gap: '$5',
+                  }}
+               >
+                  <BoxIcon />
+                  <Flex direction={'column'}>
+                     <Text h4 weight={'medium'}>
+                        Assessment Review
+                     </Text>
+                     <Text
+                        span
+                        css={{
+                           maxWidth: '400px',
+                           color: '$accents8',
+                        }}
+                     >
+                        Our model analyzes the strengths and weaknesses in the student user&apos;s knowledge on specific topics
+                        in tandem to the assessment material, helping the student user fill in any of their knowledge gaps.
+                     </Text>
+                  </Flex>
+               </Flex>
+   
+
+            </Flex>
+            <Flex align={'center'}>
+               <FeatureIcon />
+            </Flex>
+         </Flex>
          <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
+
+            css={{position: 'absolute', inset: '0p', left: '0', mt: '$1'}}
+
          />
       </>
    );

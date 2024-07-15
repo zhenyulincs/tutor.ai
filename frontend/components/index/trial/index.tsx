@@ -14,7 +14,7 @@ export const Trial = () => {
             direction={'column'}
             align={'center'}
          >
-            <Text h3>Start your free trials</Text>
+            <Text h3>Try Tutor.ai today</Text>
             <Text
                span
                css={{
@@ -23,11 +23,14 @@ export const Trial = () => {
                   textAlign: 'center',
                }}
             >
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-               condimentum, nisl
+               Start personalizing your learning experience now.
             </Text>
 
-            <Button>Button</Button>
+            <Button>
+               <a href="ai_chat">
+                  Try Tutor.ai
+               </a>
+            </Button>
          </Flex>
 
          <Divider
