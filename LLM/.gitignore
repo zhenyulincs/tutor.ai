@@ -2,4 +2,6 @@
 *.pdf
 archive
 vector_storage
+mistral_model
+QA_Dataset
 __pycache__
