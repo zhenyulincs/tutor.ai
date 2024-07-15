@@ -34,41 +34,12 @@ export const Footer = () => {
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
-                           First Link
+                           Home
                         </Text>
                      </Box>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Resources</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
+                           Try Tutor.ai
                         </Text>
                      </Box>
                      <Box as={'li'}>
@@ -88,16 +59,40 @@ export const Footer = () => {
                   direction={'column'}
                   align={'center'}
                >
-                  <Text h5>Contact</Text>
+                  <Text h5>Features</Text>
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
-                           First Link
+                           Smart Study Guide
                         </Text>
                      </Box>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
-                           Second Link
+                           AI-Powered Q&A
+                        </Text>
+                     </Box>
+                     <Box as={'li'}>
+                        <Text span css={{color: '$accents8'}}>
+                           Assessment Prep Pro
+                        </Text>
+                     </Box>
+                  </Box>
+               </Flex>
+               <Flex
+                  css={{gap: '$5', w: '250px'}}
+                  direction={'column'}
+                  align={'center'}
+               >
+                  <Text h5>Company</Text>
+                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
+                     <Box as={'li'}>
+                        <Text span css={{color: '$accents8'}}>
+                           Our Team
+                        </Text>
+                     </Box>
+                     <Box as={'li'}>
+                        <Text span css={{color: '$accents8'}}>
+                           SFSU MIC Lab
                         </Text>
                      </Box>
                      <Box as={'li'}>

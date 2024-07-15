@@ -33,7 +33,7 @@ export const Features1 = () => {
                <Text span css={{color: '$blue600'}}>
                   Feature 1
                </Text>
-               <Text h3>Learning with Artificial Intelligence</Text>
+               <Text h3>Smart Study Guide</Text>
                <Text
                   span
                   css={{
@@ -41,8 +41,10 @@ export const Features1 = () => {
                      color: '$accents8',
                   }}
                >
-                  Tutor.ai looks through course material or student user prompts, 
-                  and answers accordingly to the student user&apos;s needs. 
+                  Our Smart Study Guide leverages advanced AI to provide personalized learning paths tailored 
+                  to each student&apos;s unique needs. This feature analyzes your strengths and weaknesses, offering 
+                  targeted content and resources to help you master your coursework efficiently.
+
 
                </Text>
 
@@ -55,6 +57,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
+                        Course Preparation
                         Course Preparation
                      </Text>
                      <Text

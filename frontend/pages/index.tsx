@@ -9,10 +9,9 @@ import {Features2} from '../components/index/features2';
 import {Features3} from '../components/index/features3';
 
 //
-import {Statistics} from '../components/index/technologies';
 //import {Plans} from '../components/index/plans';
-import {Faq} from '../components/index/faq';
-import {Trial} from '../components/index/trial';
+//import {Faq} from '../components/index/faq';
+// import {Trial} from '../components/index/trial';
 import {Footer} from '../components/index/footer';
 
 const Home: NextPage = () => {
@@ -25,9 +24,6 @@ const Home: NextPage = () => {
             <Features1 />
             <Features2 />
             <Features3 />
-            <Statistics />
-            <Faq />
-            <Trial />
             <Footer />
          </Box>
       </Layout>
