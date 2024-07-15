@@ -3,3 +3,5 @@
 archive
 vector_storage
 __pycache__
+mistral_model
+QA_Dataset
