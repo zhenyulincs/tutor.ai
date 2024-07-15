@@ -36,7 +36,7 @@ export const Nav = () => {
             <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
             <AcmeLogo />
             <Text b color="inherit" hideIn="xs">
-               Tutor.ai
+               <Link href="pages/index.tsx">Tutor.ai</Link>
             </Text>
             <Navbar.Content
                hideIn="sm"
@@ -64,9 +64,14 @@ export const Nav = () => {
                      aria-label="Tutor.ai features"
                      css={{
                         '$$dropdownMenuWidth': '340px',
-                        '$$dropdownItemHeight': '70px',
+                        '$$dropdownItemHeight': '80px',
                         '& .nextui-dropdown-item': {
                            'py': '$4',
+                           'my': '$2',
+                           'mx': '$2',
+                           'outline': 'solid',
+                           'outline-color': 'Gray',
+                           'outlineWidth': '0.5px',
                            'svg': {
                               color: '$secondary',
                               mr: '$4',
@@ -84,7 +89,7 @@ export const Nav = () => {
                         description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
                         icon={icons.scale}
                      >
-                        PreparAI
+                        Smart Study Guide
                      </Dropdown.Item>
                      <Dropdown.Item
                         key="HomeworkAidAI"
@@ -92,7 +97,7 @@ export const Nav = () => {
                         description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
                         icon={icons.activity}
                      >
-                        HomeworkAidAI
+                        AI-powered Q&A
                      </Dropdown.Item>
                      <Dropdown.Item
                         key="QuizzAI"
@@ -100,23 +105,7 @@ export const Nav = () => {
                         description="Create and practice with quizzes from your course material. "
                         icon={icons.flash}
                      >
-                        QuizzAI
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="KnowledgeDetectAI"
-                        showFullDescription
-                        description="Analyzes homework and exam, Identifies knowledge gaps, and Informs targeted instructional strategies."
-                        icon={icons.server}
-                     >
-                        KnowledgeDetectAI
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="WisdomAI"
-                        showFullDescription
-                        description="Talk to your personal tutor 24/7 in real time"
-                        icon={icons.server}
-                     >
-                        WisdomAI
+                        Assessment Prep Pro
                      </Dropdown.Item>
                   </Dropdown.Menu>
                </Dropdown>
@@ -188,7 +177,7 @@ export const Nav = () => {
                         }
                      }}
                   >
-                     <Dropdown.Section title="AI Learning">
+                     <Dropdown.Section title="Smart Study Guide">
                         <Dropdown.Item
                            key="Prepare for Class"
                            icon={icons.server}
@@ -202,7 +191,7 @@ export const Nav = () => {
                            Class Review
                         </Dropdown.Item>
                      </Dropdown.Section>
-                     <Dropdown.Section title="AI Asking">
+                     <Dropdown.Section title="AI-powered Q&A">
                         <Dropdown.Item
                            key="Exam Preparation"
                            icon={icons.server}
@@ -217,7 +206,7 @@ export const Nav = () => {
                         </Dropdown.Item>
 
                      </Dropdown.Section>
-                     <Dropdown.Section title="AI Preparation">
+                     <Dropdown.Section title="Assessment Preparation">
                         <Dropdown.Item
                            key="Practice Generation"
                            icon={icons.server}
@@ -234,8 +223,8 @@ export const Nav = () => {
                   </Dropdown.Menu>
                </Dropdown>
 
-               <Navbar.Link href="#">Our Blog</Navbar.Link>
-               <Navbar.Link href="#">For Educators</Navbar.Link>
+               <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutor-ai-team/team">Our Team</Navbar.Link>
+               <Navbar.Link href="#">Placeholder 1</Navbar.Link>
             </Navbar.Content>
          </Navbar.Brand>
 
