@@ -10,34 +10,40 @@ export const Trusted = () => {
             direction={'column'}
             align={'center'}
             css={{
-               'pt': '$20',
+               'pt': '$32',
                'px': '$6',
+               'py': '$20',
                '@md': {
                   px: '$64',
                },
-               'pb': '$11'
+               'pb': '$10'
+
 
             }}
          >
             <Text h1 css={{textAlign: 'center',
-                           fontSize: '$6xl'
+                           fontSize: '$4xl'
             }}>
-               Empowering students to excel academically through personalized AI-driven support.
+               Empowering students to excel academically
+               <br></br> 
+               through personalized AI-driven support.
 
 
             </Text>
             <Text
                css={{
                   color: '$accents8',
-                  maxWidth: '800px',
+                  maxWidth: '1400px',
                   textAlign: 'center',
-                  'pt': '$8'
+                  'pt': '$10'
                }}
                weight="normal"
-               size={'$2xl'}
+               size={'$3xl'}
             >
                Tutor.AI revolutionizes learning with features like the Smart Study Guide,
-               AI-Powered Q&A, and Assessment Prep Pro. Our platform adapts to each student&apos;s needs, 
+               AI-Powered Q&A, and Assessment Prep Pro. 
+               <br></br>
+               Our platform adapts to each student's needs, 
                offering targeted resources, instant answers, and effective exam preparation, 
                making academic success accessible and efficient.
 
@@ -58,22 +64,12 @@ export const Trusted = () => {
             >
                <Grid sm={3} justify="center">
                   <Flex align={'center'} justify={'center'}>
-                     
-                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
-                        <a href='#start_of_feature'>
-                           Our Features
-                        </a> 
-                     </Text>
+               
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
                      
-                     <Text weight={'semibold'} span size={'$3xl'} css={{color: '$blue600'}}>
-                        <a href='#technologies'>
-                           Technologies
-                        </a>
-                     </Text>
                   </Flex>
                </Grid>
             </Grid.Container>
@@ -81,7 +77,7 @@ export const Trusted = () => {
 
          <Divider
 
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
+            css={{position: 'absolute', inset: '0p', left: '0', mt: '$0'}}
 
          />
       </>

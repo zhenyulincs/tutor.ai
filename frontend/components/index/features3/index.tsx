@@ -29,9 +29,8 @@ export const Features3 = () => {
          >
             <Flex direction="column">
                <Text span css={{color: '$blue600'}}>
-                  Feature 3
                </Text>
-               <Text h3>Using AI to Prepare for Assessments</Text>
+               <Text h3 css={{fontSize: '$4xl'}}>Using AI to Prepare for Assessments</Text>
                <Text
                   span
                   css={{
@@ -62,8 +61,8 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model can generate preparational content based on subject and topic
-                        the end user is being assessed on, such as a mock exam.  
+                        Our model generates tailored preparational content based on the subject and topic of the upcoming assessment. 
+                        This includes creating mock exams and practice questions to help students thoroughly prepare for their tests.
 
                      </Text>
                   </Flex>
@@ -86,8 +85,8 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model analyzes the strengths and weaknesses in the student user&apos;s knowledge on specific topics
-                        in tandem to the assessment material, helping the student user fill in any of their knowledge gaps.
+                        Our model analyzes the student&apos;s performance to identify strengths and weaknesses in their knowledge of specific topics. 
+                        It provides targeted resources and feedback to help fill any knowledge gaps and reinforce understanding.
                      </Text>
                   </Flex>
                </Flex>

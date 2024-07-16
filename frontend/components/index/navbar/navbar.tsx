@@ -34,9 +34,8 @@ export const Nav = () => {
       >
          <Navbar.Brand>
             <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
-            <AcmeLogo />
             <Text b color="inherit" hideIn="xs">
-               <Link href="pages/index.tsx">Tutor.ai</Link>
+               <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} >Tutor.ai</Link>
             </Text>
             <Navbar.Content
                hideIn="sm"
@@ -44,88 +43,25 @@ export const Nav = () => {
                   pl: '6rem',
                }}
             >
-               <Dropdown isBordered>
-                  <Navbar.Item>
-                     <Dropdown.Button
-                        auto
-                        light
-                        css={{
-                           px: 0,
-                           dflex: 'center',
-                           svg: { pe: 'none' },
-                        }}
-                        iconRight={icons.chevron}
-                        ripple={false}
-                     >
-                        Our Features
-                     </Dropdown.Button>
-                  </Navbar.Item>
-                  <Dropdown.Menu
-                     aria-label="Tutor.ai features"
-                     css={{
-                        '$$dropdownMenuWidth': '340px',
-                        '$$dropdownItemHeight': '80px',
-                        '& .nextui-dropdown-item': {
-                           'py': '$4',
-                           'my': '$2',
-                           'mx': '$2',
-                           'outline': 'solid',
-                           'outline-color': 'Gray',
-                           'outlineWidth': '0.5px',
-                           'svg': {
-                              color: '$secondary',
-                              mr: '$4',
-                           },
-                           '& .nextui-dropdown-item-content': {
-                              w: '100%',
-                              fontWeight: '$semibold',
-                           },
-                        },
-                     }}
+                 <Navbar.Content 
                   >
-                     <Dropdown.Item
-                        key="PreparAI"
-                        showFullDescription
-                        description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
-                        icon={icons.scale}
-                     >
-                        Smart Study Guide
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="HomeworkAidAI"
-                        showFullDescription
-                        description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
-                        icon={icons.activity}
-                     >
-                        AI-powered Q&A
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="QuizzAI"
-                        showFullDescription
-                        description="Create and practice with quizzes from your course material. "
-                        icon={icons.flash}
-                     >
-                        Assessment Prep Pro
-                     </Dropdown.Item>
-                  </Dropdown.Menu>
-               </Dropdown>
+                  <Navbar.Item>
+                     <Navbar.Link href="#">
+                     Use Cases
+                     </Navbar.Link>
+                  </Navbar.Item>
+               </Navbar.Content>
 
                <Dropdown isBordered>
+                                   <Navbar.Content 
+                  css={{ pl: 'px' }}
+                  >
                   <Navbar.Item>
-                     <Dropdown.Button
-                        auto
-                        light
-                        css={{
-                           px: 0,
-                           dflex: 'center',
-                           svg: { pe: 'none' },
-                        }}
-                        iconRight={icons.chevron}
-                        ripple={false}
-                     >
-                        Use Cases
-                     </Dropdown.Button>
+                     <Navbar.Link href="#">
+                     Technologies
+                     </Navbar.Link>
                   </Navbar.Item>
+               </Navbar.Content>
                   <Dropdown.Menu
                      color="secondary"
                      aria-label="Actions"
@@ -224,7 +160,6 @@ export const Nav = () => {
                </Dropdown>
 
                <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutor-ai-team/team">Our Team</Navbar.Link>
-               <Navbar.Link href="#">Placeholder 1</Navbar.Link>
             </Navbar.Content>
          </Navbar.Brand>
 

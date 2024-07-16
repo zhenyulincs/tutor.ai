@@ -30,10 +30,12 @@ export const Features1 = () => {
             }}
          >
             <Flex direction="column">
-               <Text span css={{color: '$blue600'}}>
-                  Feature 1
-               </Text>
-               <Text h3>Smart Study Guide</Text>
+               <Text h3 css = {{
+                  fontSize: '$4xl'
+               }}
+               >
+                  Smart Study Guide
+                  </Text>
                <Text
                   span
                   css={{
@@ -58,7 +60,6 @@ export const Features1 = () => {
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
                         Course Preparation
-                        Course Preparation
                      </Text>
                      <Text
                         span
@@ -67,8 +68,10 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model can create a personalized prerequisite roadmap prior to 
-                        the student user&apos;s class, recommending inuitive, high quality prepatory study resources.
+                        Our model creates a customized roadmap tailored to each student&apos;s 
+                        unique needs before the start of their class. 
+                        It recommends intuitive, high-quality preparatory study resources, 
+                        ensuring that students are well-prepared and confident from day one.
                      </Text>
                   </Flex>
                </Flex>
@@ -91,9 +94,9 @@ export const Features1 = () => {
                         }}
                      >
 
-                        Our model is able to summarize course topics and material, 
-                        providing the adequate recommended resources for the student to review on
-                        prior and during enrollment in the class.
+                        Our model summarizes course topics and materials, 
+                        providing students with essential resources for effective review. It offers personalized 
+                        recommendations for both prior and ongoing class enrollment, enhancing understanding and retention.
                      </Text>
                   </Flex>
                </Flex>

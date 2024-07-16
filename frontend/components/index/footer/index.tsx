@@ -83,7 +83,7 @@ export const Footer = () => {
                   direction={'column'}
                   align={'center'}
                >
-                  <Text h5>Company</Text>
+                  <Text h5>Team</Text>
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
@@ -93,64 +93,6 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            SFSU MIC Lab
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Legal</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Press</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
                         </Text>
                      </Box>
                      <Box as={'li'}>
@@ -194,38 +136,6 @@ export const Footer = () => {
                      },
                   }}
                >
-                  <Flex
-                     css={{
-                        gap: '$10',
-                     }}
-                     wrap={'wrap'}
-                  >
-                     <AcmeLogo />
-                     <AcmeLogo />
-                     <AcmeLogo />
-                     <AcmeLogo />
-                  </Flex>
-                  <Flex
-                     css={{
-                        gap: '$6',
-                     }}
-                  >
-                     <Text span css={{color: '$accents8'}}>
-                        Terms of Service
-                     </Text>
-                     <Text span css={{color: '$accents8'}}>
-                        Privacy Policy
-                     </Text>
-                  </Flex>
-                  <Flex
-                     css={{
-                        gap: '$6',
-                     }}
-                  >
-                     <Text span css={{color: '$accents8'}}>
-                        © Copyright 2021 Acme Inc.
-                     </Text>
-                  </Flex>
                </Flex>
             </Box>
          </Box>

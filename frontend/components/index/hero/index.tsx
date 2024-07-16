@@ -9,7 +9,7 @@ export const Hero = () => {
       <>
          <Flex
             css={{
-               'gap': '$3',
+               'gap': '$10',
                'px': '$6',
                'flexDirection': 'column',
                'alignContent': 'center',
@@ -18,7 +18,7 @@ export const Hero = () => {
                'width': '100%',
                '@sm': {
                   flexDirection: 'row',
-                  mt: '$20',
+                  mt: '$18',
                },
             }}
             justify={'center'}
@@ -80,6 +80,7 @@ export const Hero = () => {
                      h1
                      css={{
                         display: 'inline',
+                        fontSize: '48px',
                      }}
                   >
                      <br /> into conversations. {' '}
