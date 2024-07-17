@@ -18,7 +18,6 @@ export const Trusted = () => {
                },
                'pb': '$10'
 
-
             }}
          >
             <Text h1 css={{textAlign: 'center',
@@ -27,6 +26,7 @@ export const Trusted = () => {
                Empowering students to excel academically
                <br></br> 
                through personalized AI-driven support.
+
 
 
             </Text>
@@ -38,7 +38,7 @@ export const Trusted = () => {
                   'pt': '$10'
                }}
                weight="normal"
-               size={'$3xl'}
+               size={'$2xl'}
             >
                Tutor.AI revolutionizes learning with features like the Smart Study Guide,
                AI-Powered Q&A, and Assessment Prep Pro. 
@@ -72,6 +72,7 @@ export const Trusted = () => {
                      
                   </Flex>
                </Grid>
+
             </Grid.Container>
          </Flex>
 

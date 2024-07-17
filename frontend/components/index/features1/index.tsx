@@ -36,6 +36,7 @@ export const Features1 = () => {
                >
                   Smart Study Guide
                   </Text>
+
                <Text
                   span
                   css={{
@@ -59,6 +60,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
+                        Course Preparation
                         Course Preparation
                      </Text>
                      <Text

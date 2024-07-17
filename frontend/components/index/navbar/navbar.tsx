@@ -52,6 +52,7 @@ export const Nav = () => {
                   </Navbar.Item>
                </Navbar.Content>
 
+
                <Dropdown isBordered>
                                    <Navbar.Content 
                   css={{ pl: 'px' }}
@@ -160,6 +161,7 @@ export const Nav = () => {
                </Dropdown>
 
                <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutor-ai-team/team">Our Team</Navbar.Link>
+
             </Navbar.Content>
          </Navbar.Brand>
 
