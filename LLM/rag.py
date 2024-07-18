@@ -40,8 +40,8 @@ class rag():
         llm = LlamaCPP(
             # You can pass in the URL to a GGML model to download it automatically
             # optionally, you can set the path to a pre-downloaded model instead of model_url
-            model_path="LLM/mistral_model/mistral-7b-instruct-v0.2.Q8_0.gguf",
-            temperature=0.5,
+            model_path="LLM/mistral_model/ggml-model-f16.gguf",
+            temperature=0.2,
             max_new_tokens=4096,
             # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
             context_window=7000,
@@ -49,7 +49,7 @@ class rag():
             generate_kwargs={},
             # kwargs to pass to __init__()
             # set to at least 1 to use GPU
-            model_kwargs={"n_gpu_layers": 20},
+            model_kwargs={"n_gpu_layers": 15},
             verbose=False,
             completion_to_prompt=self._completion_to_prompt
         )
@@ -91,7 +91,7 @@ class rag():
         retriever = VectorIndexAutoRetriever(
             indexes,
             vector_store_info=vector_store_info,
-            verbose=True,
+            verbose=False,
         )
 
         bm25_retriever = BM25Retriever.from_defaults(
@@ -113,22 +113,29 @@ class rag():
         system_prompt = [
             ChatMessage(
                 role="system", 
-                content="""Generate assessment questions base on the given content. 
-                You will only respond with a JSON object with only the question and answer. Do not provide explanations.
+                content="""
+                You will only respond with a JSON object with the keyword and description. Do not provide explanations.
+                Keywords must contain enough information able to search on youtube
+                Do not provide explanations.
                 #################
                 Example #1 Input :
-                [[SCHEMA]]
-                [\{
-                'question':,
-                'answer':,
-                \},
-                \{
-                'question':,
-                'answer':,
-                \}
+                [[JSON OBJECT]]
+                [
+                    {
+                        "keyword":,
+                        "description":
+                    }
+                                        {
+                        "keyword":,
+                        "description":
+                    }
+                                        {
+                        "keyword":,
+                        "description":
+                    }
                 ]
-                [[/SCHEMA]]
-                #################
+                [[JSON OBJECT]]
+                
                 """
                 )
             ]
@@ -165,17 +172,33 @@ class rag():
     
 
     def get_youtube_type_response(self,query):
-        query += \
+        pre_query = \
         """
-        JSON format must only contain these 2 keys: keyword, description for the value of keyword, 
-        it must contain enough information that can be search on youtube
+        You will only respond with a JSON object with the key keyword and description. Do not provide explanations.
+        the keywords must contain enough information can search on youtube
         Example #1 Input :
-        [[SCHEMA]]
-        'keyword',
-        'description'
-        [[/SCHEMA]]
+        [[JSON OBJECT]]
+        [
+            {
+                "keyword":,
+                "description":
+            }
+                                {
+                "keyword":,
+                "description":
+            }
+                                {
+                "keyword":,
+                "description":
+            }
+        ]
+        [[JSON OBJECT]]
+        
         """
+        query = pre_query + query
         response = self.chat(query)
+        print(query)
+        print("=====================")
         print(response)
         # cleaned_json_data = response.strip('```json').strip('```').strip()
         cleaned_json_data = json.loads(response)
@@ -209,7 +232,21 @@ class rag():
         """
         return final_response
 
-# rag = rag()
+rag = rag()
 
-# print(rag.chat("Generate assessment questions based on the chapter Formatted Input/Output"))
-# print(rag.get_youtube_type_response("Given me an learning outline for Formatted Input/Output"))
+# print(rag.get_youtube_type_response("Generate assessment questions and asnwers based on the chapter Formatted Input/Output"))
+# print(rag.chat(query="Given me an learning outline for Formatted Input/Output in JSON object"))
+counter = 0
+i = -1
+while i < 100:
+    i += 1
+    try:
+        response = rag.chat(query="Generate the learning outline for Formatted Input/Output in JSON Object, with keys are keyword and description")
+        json.loads(response)
+        counter += 1
+        print(response)
+        rag.clear_chat_history()
+    except:
+        print("============================================Error:=========================================")
+        print(response)
+print(f"Acc: {counter}%")
