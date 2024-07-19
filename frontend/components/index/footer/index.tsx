@@ -70,7 +70,6 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            AI-Powered Q&A
-
                         </Text>
                      </Box>
                      <Box as={'li'}>
