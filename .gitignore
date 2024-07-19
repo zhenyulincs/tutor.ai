@@ -1,2 +1,3 @@
-*tar.gz
-*secret_key
+*.tar.gz
+.webui_secret_key
+
