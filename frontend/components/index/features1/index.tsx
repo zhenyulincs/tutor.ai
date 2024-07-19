@@ -1,15 +1,15 @@
-import {Divider, Grid, Text} from '@nextui-org/react';
+import { Divider, Grid, Text } from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../../icons/BoxIcon';
-import {FeatureIcon} from '../../icons/FeatureIcon';
-import {Box} from '../../styles/box';
-import {Flex} from '../../styles/flex';
+import { BoxIcon } from '../../icons/BoxIcon';
+import { FeatureIcon } from '../../icons/FeatureIcon';
+import { Box } from '../../styles/box';
+import { Flex } from '../../styles/flex';
 
 export const Features1 = () => {
    return (
       <>
          <Flex
-            id='start_of_feature'
+            id='features'
             direction={'column'}
             css={{
                'gap': '1rem',
@@ -17,10 +17,8 @@ export const Features1 = () => {
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
-
-
                '@sm': {
-                  justifyContent: 'space-around',
+                  justifyContent: 'space-between',
                   px: '$32',
                   flexDirection: 'row',
                },
@@ -29,14 +27,12 @@ export const Features1 = () => {
                },
             }}
          >
-            <Flex direction="column">
-               <Text h3 css = {{
+            <Flex direction="column" css={{ width: '60%' }}>
+               <Text h3 css={{
                   fontSize: '$4xl'
-               }}
-               >
+               }}>
                   Smart Study Guide
-                  </Text>
-
+               </Text>
                <Text
                   span
                   css={{
@@ -44,13 +40,7 @@ export const Features1 = () => {
                      color: '$accents8',
                   }}
                >
-                  Our Smart Study Guide leverages advanced AI to provide personalized learning paths tailored 
-                  to each student&apos;s unique needs. This feature analyzes your strengths and weaknesses, offering 
-                  targeted content and resources to help you master your coursework efficiently.
-
-
                </Text>
-
                <Flex
                   css={{
                      py: '$10',
@@ -60,8 +50,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Course Preparation
-                        Course Preparation
+                        Class Preparation
                      </Text>
                      <Text
                         span
@@ -70,10 +59,7 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model creates a customized roadmap tailored to each student&apos;s 
-                        unique needs before the start of their class. 
-                        It recommends intuitive, high-quality preparatory study resources, 
-                        ensuring that students are well-prepared and confident from day one.
+                        Prepare for your classes with AI-driven study guides and resources tailored to your specific needs, ensuring you&apos;re always ready to excel.
                      </Text>
                   </Flex>
                </Flex>
@@ -86,7 +72,7 @@ export const Features1 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Course Review
+                        Class Review
                      </Text>
                      <Text
                         span
@@ -95,24 +81,16 @@ export const Features1 = () => {
                            color: '$accents8',
                         }}
                      >
-
-                        Our model summarizes course topics and materials, 
-                        providing students with essential resources for effective review. It offers personalized 
-                        recommendations for both prior and ongoing class enrollment, enhancing understanding and retention.
+                        Review and reinforce your learning with personalized content summaries and quizzes that help you retain key concepts and improve your understanding.
                      </Text>
                   </Flex>
                </Flex>
-
             </Flex>
-            <Flex align={'center'}>
-               <FeatureIcon />
+            <Flex align={'end'} css={{ width: '40%' }}>
+               <FeatureIcon src="./Smart_Study_Guide_Platform.jpg" style={{ width: '100%' }} />
             </Flex>
          </Flex>
-         <Divider
-
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$2'}}
-
-         />
+         <Divider css={{ position: 'absolute', inset: '0p', left: '0', mt: '$2' }} />
       </>
    );
 };

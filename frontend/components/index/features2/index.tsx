@@ -29,34 +29,28 @@ export const Features2 = () => {
                },
             }}
          >
-            <Flex direction="column">
+            <Flex align={'center'} css={{ width: '50%' }}>
+               <FeatureIcon src='./A_modern_classroom_setting_with_a_few_students_usi.jpg' style={{width:'100%'}}/>
+            </Flex>
+            <Flex align={'end'} direction="column" css={{ width: '50%', alignItems: 'flex-end' }}>
                <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3 css={{fontSize: '$4xl'}}>Smart Study Guide</Text>
-               <Text
-                  span
-                  css={{
-                     maxWidth: '400px',
-                     color: '$accents8',
-                  }}
-               >
-                  Our Smart Study Guide leverages advanced AI to provide personalized learning paths tailored 
-                  to each student&apos;s unique needs. This feature analyzes your strengths and weaknesses, offering 
-                  targeted content and resources to help you master your coursework efficiently.
-
-
+               <Text h3 css={{fontSize: '$4xl',textAlign:'right'}}>AI-Powered Q&A <br></br>Related to Course Subject
                </Text>
 
+
                <Flex
                   css={{
                      py: '$10',
                      gap: '$5',
+                     justifyContent:'flex-end'
                   }}
                >
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Course Preparation
+                        Exam Preparation
+
                      </Text>
                      <Text
                         span
@@ -65,10 +59,8 @@ export const Features2 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model creates a customized roadmap tailored to each student&apos;s 
-                        unique needs before the start of their class. 
-                        It recommends intuitive, high-quality preparatory study resources, 
-                        ensuring that students are well-prepared and confident from day one.
+                        Use AI-powered Q&A to clarify doubts and deepen your understanding of exam topics, providing you with the confidence to tackle any question.
+
                      </Text>
                   </Flex>
                </Flex>
@@ -76,12 +68,14 @@ export const Features2 = () => {
                   css={{
                      py: '$10',
                      gap: '$5',
+                     justifyContent:'flex-end'
                   }}
                >
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Course Review
+                        Exam Review
+
                      </Text>
                      <Text
                         span
@@ -91,17 +85,15 @@ export const Features2 = () => {
                         }}
                      >
 
-                        Our model summarizes course topics and materials, 
-                        providing students with essential resources for effective review. It offers personalized 
-                        recommendations for both prior and ongoing class enrollment, enhancing understanding and retention.
+                        Reflect on your exam performance with detailed AI-generated feedback, helping you identify strengths and areas for improvement.
+
+
                      </Text>
                   </Flex>
                </Flex>
 
             </Flex>
-            <Flex align={'center'}>
-               <FeatureIcon />
-            </Flex>
+
          </Flex>
          <Divider
 
