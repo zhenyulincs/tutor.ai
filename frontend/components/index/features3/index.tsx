@@ -31,6 +31,7 @@ export const Features3 = () => {
                <Text span css={{color: '$blue600'}}>
                </Text>
                <Text h3 css={{fontSize: '$4xl'}}>Assessment Prep Pro</Text>
+
                <Text
                   span
                   css={{
@@ -87,6 +88,7 @@ export const Features3 = () => {
                         }}
                      >
                         Identify and address your knowledge gaps with AI-driven analysis, helping you focus on areas that need the most attention for continuous improvement.
+
                      </Text>
                   </Flex>
                </Flex>

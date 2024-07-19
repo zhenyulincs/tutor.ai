@@ -4,6 +4,7 @@ import {Layout} from '../components/index/navbar/layout';
 import {Hero} from '../components/index/hero';
 import {Trusted} from '../components/index/trusted';
 import {Technologies} from '../components/index/technologies';
+
 //import { UseCase } from '../components/index/usecases';
 import {Box} from '../components/styles/box';
 import {Features1} from '../components/index/features1';
