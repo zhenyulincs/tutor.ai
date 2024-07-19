@@ -15,6 +15,8 @@ import {Features3} from '../components/index/features3';
 //import {Plans} from '../components/index/plans';
 //import {Faq} from '../components/index/faq';
 // import {Trial} from '../components/index/trial';
+//import {Faq} from '../components/index/faq';
+// import {Trial} from '../components/index/trial';
 import {Footer} from '../components/index/footer';
 
 const Home: NextPage = () => {

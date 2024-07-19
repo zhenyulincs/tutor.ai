@@ -39,6 +39,7 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            Try Tutor.ai
+                           Try Tutor.ai
                         </Text>
                      </Box>
                      <Box as={'li'}>
@@ -59,14 +60,17 @@ export const Footer = () => {
                   align={'center'}
                >
                   <Text h5>Features</Text>
+                  <Text h5>Features</Text>
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
+                           Smart Study Guide
                            Smart Study Guide
                         </Text>
                      </Box>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
+                           AI-Powered Q&A
                            AI-Powered Q&A
                         </Text>
                      </Box>

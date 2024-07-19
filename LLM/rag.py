@@ -25,6 +25,15 @@ from llama_index.llms.llama_cpp.llama_utils import (
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
+from llama_index.llms.llama_cpp import LlamaCPP
+from llama_index.llms.llama_cpp.llama_utils import (
+    B_INST,
+    E_INST,
+    DEFAULT_SYSTEM_PROMPT
+)
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
 from page_index import get_all_chapter_title
 from youtube import YouTubeSearcher
 import os
