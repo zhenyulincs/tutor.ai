@@ -3,10 +3,11 @@ import React from 'react';
 import {AcmeLogo} from '../navbar/logo';
 import {Flex} from '../../styles/flex';
 
-export const Trusted = () => {
+export const Technologies = () => {
    return (
       <>
          <Flex
+            id='technologies'
             direction={'column'}
             align={'center'}
             css={{
@@ -23,9 +24,7 @@ export const Trusted = () => {
             <Text h1 css={{textAlign: 'center',
                            fontSize: '$4xl'
             }}>
-               Empowering students to excel academically
-               <br></br> 
-               through personalized AI-driven support.
+               Innovative Methodology & Breakthrough Technology
 
 
 
@@ -40,12 +39,7 @@ export const Trusted = () => {
                weight="normal"
                size={'$2xl'}
             >
-               Tutor.AI revolutionizes learning with features like the Smart Study Guide,
-               AI-Powered Q&A, and Assessment Prep Pro. 
-               <br></br>
-               Our platform adapts to each student&apos;s needs, 
-               offering targeted resources, instant answers, and effective exam preparation, 
-               making academic success accessible and efficient.
+               developing....
 
             </Text>
             <Grid.Container
