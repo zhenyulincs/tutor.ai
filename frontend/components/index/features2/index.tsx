@@ -40,6 +40,7 @@ export const Features2 = () => {
 
 
                <Flex
+
                   css={{
                      py: '$10',
                      gap: '$5',
@@ -61,6 +62,7 @@ export const Features2 = () => {
                      >
                         Use AI-powered Q&A to clarify doubts and deepen your understanding of exam topics, providing you with the confidence to tackle any question.
 
+
                      </Text>
                   </Flex>
                </Flex>
@@ -69,12 +71,14 @@ export const Features2 = () => {
                      py: '$10',
                      gap: '$5',
                      justifyContent:'flex-end'
+
                   }}
                >
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
                         Exam Review
+
 
                      </Text>
                      <Text
@@ -93,6 +97,7 @@ export const Features2 = () => {
                </Flex>
 
             </Flex>
+
 
          </Flex>
          <Divider

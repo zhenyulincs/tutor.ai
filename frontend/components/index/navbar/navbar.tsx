@@ -34,6 +34,7 @@ export const Nav = () => {
          <Navbar.Brand>
             <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
             <AcmeLogo ></AcmeLogo >
+
             <Text b color="inherit" hideIn="xs">
                <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} >Tutor.ai</Link>
             </Text>
@@ -46,6 +47,7 @@ export const Nav = () => {
                <Navbar.Link href="#features">Features</Navbar.Link>
                <Navbar.Link href="#technologies">Technologies</Navbar.Link>
                <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutorai/team">Teams</Navbar.Link>
+
             </Navbar.Content>
          </Navbar.Brand>
 

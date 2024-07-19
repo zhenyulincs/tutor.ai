@@ -33,6 +33,7 @@ export const Features1 = () => {
                }}>
                   Smart Study Guide
                </Text>
+
                <Text
                   span
                   css={{
@@ -82,6 +83,7 @@ export const Features1 = () => {
                         }}
                      >
                         Review and reinforce your learning with personalized content summaries and quizzes that help you retain key concepts and improve your understanding.
+
                      </Text>
                   </Flex>
                </Flex>

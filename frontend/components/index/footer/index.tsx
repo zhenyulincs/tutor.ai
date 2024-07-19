@@ -88,6 +88,7 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            Our Team
+                           Our Team
                         </Text>
                      </Box>
                      <Box as={'li'}>
