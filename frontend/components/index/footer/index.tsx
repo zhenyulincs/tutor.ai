@@ -35,6 +35,7 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            Home
+                           Home
                         </Text>
                      </Box>
                      <Box as={'li'}>
@@ -89,6 +90,7 @@ export const Footer = () => {
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
+                           Our Team
                            Our Team
                         </Text>
                      </Box>
