@@ -30,6 +30,7 @@ export const Footer = () => {
                   direction={'column'}
                   align={'center'}
                >
+
                   <Text h5>Team</Text>
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
