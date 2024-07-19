@@ -1,40 +1,38 @@
-
-import { Button, Divider, Text } from '@nextui-org/react';
+import {Divider, Grid, Text} from '@nextui-org/react';
 import React from 'react';
-import { BoxIcon } from '../../icons/BoxIcon';
-import { FeatureIcon } from '../../icons/FeatureIcon';
-import { Flex } from '../../styles/flex';
+import {BoxIcon} from '../../icons/BoxIcon';
+import {FeatureIcon} from '../../icons/FeatureIcon';
+import {Box} from '../../styles/box';
+import {Flex} from '../../styles/flex';
 
 export const Features2 = () => {
    return (
       <>
          <Flex
+            id='start_of_feature'
             direction={'column'}
             css={{
                'gap': '1rem',
-
-               'pt': '$10',
-
+               'pt': '$9',
                'justifyContent': 'center',
                'alignItems': 'center',
                'px': '$6',
 
+
                '@sm': {
-                  gap: '5rem',
-                  flexDirection: 'row-reverse',
-                  px: '$16',
+                  justifyContent: 'space-around',
+                  px: '$32',
+                  flexDirection: 'row',
                },
                '@md': {
-                  justifyContent: 'space-evenly',
+                  px: '$64',
                },
             }}
          >
-            <Flex direction="column" align={'center'}>
-               <Text span css={{ color: '$blue600' }}>
-
-                  Feature 2
+            <Flex direction="column">
+               <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3>Asking AI Questions Related to Course Subject</Text>
+               <Text h3 css={{fontSize: '$4xl'}}>Smart Study Guide</Text>
                <Text
                   span
                   css={{
@@ -42,81 +40,74 @@ export const Features2 = () => {
                      color: '$accents8',
                   }}
                >
-                  Tutor.ai is able to go beneath the surface level of the user&apos;s course,
-                  and provide subject-specific support and resources based on the user&apos;s prompt.
+                  Our Smart Study Guide leverages advanced AI to provide personalized learning paths tailored 
+                  to each student&apos;s unique needs. This feature analyzes your strengths and weaknesses, offering 
+                  targeted content and resources to help you master your coursework efficiently.
+
+
                </Text>
 
                <Flex
-                  justify={'center'}
-                  wrap={'wrap'}
                   css={{
                      py: '$10',
+                     gap: '$5',
                   }}
                >
-                  <Flex
-                     css={{
-                        py: '$10',
-                        gap: '$6',
-                     }}
-                  >
-                     <BoxIcon />
-                     <Flex direction={'column'}>
-                        <Text h4 weight={'medium'}>
-                           Topic-specific Preparation
-                        </Text>
-                        <Text
-                           span
-                           css={{
-                              maxWidth: '325px',
-                              color: '$accents8',
-                           }}
-                        >
-                           Our model allows students to query about upcoming topics for the purpose of preparation
-                           and provide personalized study plans based on the course subject for any upcoming homework, quiz, or test.
-                        </Text>
-                     </Flex>
-                  </Flex>
-                  <Flex
-                     css={{
-                        py: '$10',
-                        gap: '$5',
-                     }}
-                  >
-                     <BoxIcon />
-                     <Flex direction={'column'}>
-                        <Text h4 weight={'medium'}>
-                           Topic-specific Review
-                        </Text>
-                        <Text
-                           span
-                           css={{
-                              maxWidth: '330px',
-                              color: '$accents8',
-                           }}
-                        >
-                           Our model allows the end-user to query for the explanation of difficult course-related subjects,
-                           clarification on incorrect answers, and strategies to improve performance based on previous assessments.
-
-
-                        </Text>
-                     </Flex>
+                  <BoxIcon />
+                  <Flex direction={'column'}>
+                     <Text h4 weight={'medium'}>
+                        Course Preparation
+                     </Text>
+                     <Text
+                        span
+                        css={{
+                           maxWidth: '400px',
+                           color: '$accents8',
+                        }}
+                     >
+                        Our model creates a customized roadmap tailored to each student&apos;s 
+                        unique needs before the start of their class. 
+                        It recommends intuitive, high-quality preparatory study resources, 
+                        ensuring that students are well-prepared and confident from day one.
+                     </Text>
                   </Flex>
                </Flex>
+               <Flex
+                  css={{
+                     py: '$10',
+                     gap: '$5',
+                  }}
+               >
+                  <BoxIcon />
+                  <Flex direction={'column'}>
+                     <Text h4 weight={'medium'}>
+                        Course Review
+                     </Text>
+                     <Text
+                        span
+                        css={{
+                           maxWidth: '400px',
+                           color: '$accents8',
+                        }}
+                     >
+
+                        Our model summarizes course topics and materials, 
+                        providing students with essential resources for effective review. It offers personalized 
+                        recommendations for both prior and ongoing class enrollment, enhancing understanding and retention.
+                     </Text>
+                  </Flex>
+               </Flex>
+
             </Flex>
             <Flex align={'center'}>
                <FeatureIcon />
             </Flex>
          </Flex>
-
          <Divider
-            css={{
-               position: 'absolute',
-               inset: '1p',
-               left: '0',
-               mt: '$2', 
-            }}
+
+            css={{position: 'absolute', inset: '0p', right: '0', mt: '$2'}}
+
          />
       </>
    );
 };
-
