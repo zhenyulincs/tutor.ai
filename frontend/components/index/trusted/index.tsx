@@ -43,7 +43,7 @@ export const Trusted = () => {
                Tutor.AI revolutionizes learning with features like the Smart Study Guide,
                AI-Powered Q&A, and Assessment Prep Pro. 
                <br></br>
-               Our platform adapts to each student's needs, 
+               Our platform adapts to each student&apos;s needs, 
                offering targeted resources, instant answers, and effective exam preparation, 
                making academic success accessible and efficient.
 
