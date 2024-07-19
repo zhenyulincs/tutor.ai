@@ -2,6 +2,7 @@ import {Divider, Text} from '@nextui-org/react';
 import React from 'react';
 import {Box} from '../../styles/box';
 import {Flex} from '../../styles/flex';
+import Link from 'next/link';
 
 export const Footer = () => {
    return (
@@ -29,82 +30,17 @@ export const Footer = () => {
                   direction={'column'}
                   align={'center'}
                >
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Home
-                           Home
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Try Tutor.ai
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Features</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Smart Study Guide
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           AI-Powered Q&A
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Assessment Prep Pro
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
                   <Text h5>Team</Text>
                   <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
                      <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Our Team
-                           Our Team
-                        </Text>
+                        <Link href={"https://sites.google.com/my.smccd.edu/tutorai/team"}>Our Team</Link>
+
                      </Box>
                      <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           SFSU MIC Lab
-                        </Text>
+                        <Link href={"http://sfsu-miclab.org/"}>SFSU MIC Lab</Link>
+
                      </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
+                     
                   </Box>
                </Flex>
             </Flex>
