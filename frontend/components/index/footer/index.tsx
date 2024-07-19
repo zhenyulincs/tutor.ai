@@ -73,7 +73,6 @@ export const Footer = () => {
                      <Box as={'li'}>
                         <Text span css={{color: '$accents8'}}>
                            Assessment Prep Pro
-
                         </Text>
                      </Box>
                   </Box>

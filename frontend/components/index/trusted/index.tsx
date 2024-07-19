@@ -60,6 +60,7 @@ export const Trusted = () => {
                   '&  span': {
                      whiteSpace: 'pre',
                   }
+                  }
                }}
             >
                <Grid sm={3} justify="center">
