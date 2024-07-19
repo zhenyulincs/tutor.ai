@@ -25,6 +25,15 @@ from llama_index.llms.llama_cpp.llama_utils import (
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
+from llama_index.llms.llama_cpp import LlamaCPP
+from llama_index.llms.llama_cpp.llama_utils import (
+    B_INST,
+    E_INST,
+    DEFAULT_SYSTEM_PROMPT
+)
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
 from page_index import get_all_chapter_title
 from youtube import YouTubeSearcher
 import os
@@ -40,7 +49,7 @@ class rag():
         llm = LlamaCPP(
             # You can pass in the URL to a GGML model to download it automatically
             # optionally, you can set the path to a pre-downloaded model instead of model_url
-            model_path="LLM/mistral_model/mistral-7b-instruct-v0.2.Q8_0.gguf",
+            model_path="/home/coder/tutor.ai/LLM/mistral_model/ggml-model-f16.gguf",
             temperature=0.5,
             max_new_tokens=4096,
             # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
@@ -49,7 +58,7 @@ class rag():
             generate_kwargs={},
             # kwargs to pass to __init__()
             # set to at least 1 to use GPU
-            model_kwargs={"n_gpu_layers": 20},
+            model_kwargs={"n_gpu_layers": 10},
             verbose=False,
             completion_to_prompt=self._completion_to_prompt
         )
@@ -76,8 +85,8 @@ class rag():
         indexes = VectorStoreIndex([])
 
         bm25_indexes = []
-        vector_storages_path_list = os.listdir("LLM/vector_storage")
-        vector_storages_path_list = [os.path.join("LLM/vector_storage",vector_storages_path) for vector_storages_path in vector_storages_path_list]
+        vector_storages_path_list = os.listdir("../LLM/vector_storage")
+        vector_storages_path_list = [os.path.join("../LLM/vector_storage",vector_storages_path) for vector_storages_path in vector_storages_path_list]
 
         for vector_storages_path in vector_storages_path_list:
             
