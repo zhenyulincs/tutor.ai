@@ -61,7 +61,7 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Practice with AI-generated tests and exercises that simulate real exam conditions, ensuring you're thoroughly prepared for any assessment.
+                        Practice with AI-generated tests and exercises that simulate real exam conditions, ensuring you&apos;re thoroughly prepared for any assessment.
 
 
                      </Text>
