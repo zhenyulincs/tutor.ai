@@ -30,12 +30,12 @@ export const Features2 = () => {
             }}
          >
             <Flex align={'center'} css={{ width: '50%' }}>
-               <FeatureIcon src='./A_modern_classroom_setting_with_a_few_students_usi.jpg' style={{width:'100%'}}/>
+               <FeatureIcon src='./feature2WF.jpg' style={{width:'100%'}}/>
             </Flex>
             <Flex align={'end'} direction="column" css={{ width: '50%', alignItems: 'flex-end' }}>
                <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3 css={{fontSize: '$4xl',textAlign:'right'}}>AI-Powered Q&A <br></br>Related to Course Subject
+               <Text h3 css={{fontSize: '$4xl',textAlign:'right'}}>Asking AI Questions <br></br>Related To Course Subject
                </Text>
 
 

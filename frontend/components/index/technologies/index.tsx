@@ -39,7 +39,7 @@ export const Technologies = () => {
                weight="normal"
                size={'$2xl'}
             >
-               developing....
+               Work In Progress
 
             </Text>
             <Grid.Container

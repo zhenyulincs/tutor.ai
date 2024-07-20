@@ -31,7 +31,7 @@ export const Features1 = () => {
                <Text h3 css={{
                   fontSize: '$4xl'
                }}>
-                  Smart Study Guide
+                  Learning with Artificial Intelligence
                </Text>
 
                <Text
@@ -88,8 +88,8 @@ export const Features1 = () => {
                   </Flex>
                </Flex>
             </Flex>
-            <Flex align={'end'} css={{ width: '40%' }}>
-               <FeatureIcon src="./Smart_Study_Guide_Platform.jpg" style={{ width: '100%' }} />
+            <Flex align={'end'} css={{ width: '50%' }}>
+               <FeatureIcon src="./feature1WF.jpg" style={{ width: '100%' }} />
             </Flex>
          </Flex>
          <Divider css={{ position: 'absolute', inset: '0p', left: '0', mt: '$2' }} />
