@@ -81,7 +81,7 @@ for read_page in tqdm(range(total_page)):
     
     pdf_txt = pdf_to_text(pdf_reader,read_page)
     chapter_title = get_chapter_title(read_page + 1)
-    document = Document(text=pdf_txt, metadata={"Chapter_title": chapter_title})
+    document = Document(text=pdf_txt, metadata={"Chapter_title": chapter_title,"Subject": "C Programming"})
     try:
         
         documents.append(document)

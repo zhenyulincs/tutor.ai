@@ -13,7 +13,7 @@ export const Technologies = () => {
             css={{
                'pt': '$32',
                'px': '$6',
-               'py': '$20',
+               'py': '$10',
                '@md': {
                   px: '$64',
                },

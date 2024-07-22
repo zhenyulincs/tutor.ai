@@ -31,7 +31,7 @@ export const Features1 = () => {
                <Text h3 css={{
                   fontSize: '$4xl'
                }}>
-                  Learning with Artificial Intelligence
+                  AI Powered Class Preview and Review
                </Text>
 
                <Text
