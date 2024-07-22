@@ -135,7 +135,6 @@ class rag():
     
     
     def chat_rag(self,query):
-        print(self.chat_history)
         response = self.chat_engine.chat(query,self.chat_history)
         return str(response)
 

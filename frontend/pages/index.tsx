@@ -9,7 +9,7 @@ import {Technologies} from '../components/index/technologies';
 import {Box} from '../components/styles/box';
 import {Features1} from '../components/index/features1';
 import {Features2} from '../components/index/features2';
-import {Features3} from '../components/index/features3';
+// import {Features3} from '../components/index/features3';
 
 //
 //import {Plans} from '../components/index/plans';
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             <Trusted />
             <Features1 />
             <Features2 />
-            <Features3 />
+            {/* <Features3 /> */}
             <Technologies />
             <Footer />
          </Box>
