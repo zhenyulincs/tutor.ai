@@ -14,9 +14,9 @@ export const Footer = () => {
       >
          <Box as={'footer'} css={{width: '100%'}}>
             <Flex
-               justify={'center'}
+               justify={'end'}
                wrap={'wrap'}
-               align={'center'}
+               align={'end'}
                css={{
                   'gap': '$10',
                   '&  ul': {
@@ -25,25 +25,7 @@ export const Footer = () => {
                   '@sm': {},
                }}
             >
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
 
-                  <Text h5>Team</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Link href={"https://sites.google.com/my.smccd.edu/tutorai/team"}>Our Team</Link>
-
-                     </Box>
-                     <Box as={'li'}>
-                        <Link href={"http://sfsu-miclab.org/"}>SFSU MIC Lab</Link>
-
-                     </Box>
-                     
-                  </Box>
-               </Flex>
             </Flex>
             <Box
                css={{
@@ -53,13 +35,6 @@ export const Footer = () => {
                   },
                }}
             >
-               <Divider
-                  css={{
-                     mt: '$14',
-                     display: 'flex',
-                     justifyContent: 'center',
-                  }}
-               />
                <Flex
                   //   justify={'between'}
                   align={'center'}
@@ -67,12 +42,15 @@ export const Footer = () => {
                   css={{
                      'pt': '$8',
                      'gap': '$10',
-                     'justifyContent': 'center',
+                     'justifyContent': 'right',
                      '@md': {
                         justifyContent: 'space-between',
                      },
+                     'text-align': 'center'
+
                   }}
                >
+                  <Text h5 style={{textAlign: 'center'}}>Copyright © <Link href='#' style={{color: '#0854bc'}}>Mobile and Computing Laboratory</Link> 2024 | Powered by <Link href='#' style={{color:'#0854bc'}}>Vercel</Link></Text>
                </Flex>
             </Box>
          </Box>
