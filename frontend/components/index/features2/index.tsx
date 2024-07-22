@@ -9,7 +9,7 @@ export const Features2 = () => {
    return (
       <>
          <Flex
-            id='start_of_feature'
+            id='feature2'
             direction={'column'}
             css={{
                'gap': '1rem',
