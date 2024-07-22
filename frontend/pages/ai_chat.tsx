@@ -38,7 +38,7 @@ const AI_Chat: NextPage = () => {
   ]
 
   const { append, messages, input, handleInputChange, handleSubmit, setMessages } = useChat(
-    { api: "http://127.0.0.1:5000/api/ai", initialMessages: init_messages, streamMode: 'text'}
+    { api: "api/ai", initialMessages: init_messages, streamMode: 'text'}
   );
 
   const users_message_count = messages.filter(item => item.role === 'user').length;
