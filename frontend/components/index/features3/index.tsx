@@ -30,7 +30,7 @@ export const Features3 = () => {
             <Flex direction="column" css={{ width: '50%' }}>
                <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3 css={{fontSize: '$4xl'}}>Assessment Prep Pro</Text>
+               <Text h3 css={{fontSize: '$4xl'}}>Using AI to Prepare for Exam/Quiz</Text>
 
                <Text
                   span
@@ -96,7 +96,7 @@ export const Features3 = () => {
 
             </Flex>
             <Flex align={'center'} css={{ width: '50%' }}>
-               <FeatureIcon src='knowledge_gap_analysis.jpg' style={{width:'100%'}}/>
+               <FeatureIcon src='./feature3WF.jpg' style={{width:'100%'}}/>
             </Flex>
          </Flex>
          <Divider
