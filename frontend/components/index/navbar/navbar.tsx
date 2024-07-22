@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { ModalLogin } from '../modal';
 import { icons } from './icons';
-import { AcmeLogo  } from './logo';
+import { AcmeLogo } from './logo';
 import { useTheme as useNextTheme } from 'next-themes';
 import { useTheme } from '@nextui-org/react';
 import { GithubIcon } from '../../icons/GithubIcon';
@@ -44,7 +44,63 @@ export const Nav = () => {
                   pl: '6rem',
                }}
             >
-               <Navbar.Link href="#features">Features</Navbar.Link>
+               <Dropdown isBordered>
+                  <Navbar.Item>
+                     <Dropdown.Button
+                        auto
+                        light
+                        css={{
+                           px: 0,
+                           dflex: 'center',
+                           svg: { pe: 'none' },
+                        }}
+                        iconRight={icons.chevron}
+                        ripple={false}
+                     >
+                        Our Features
+                     </Dropdown.Button>
+                  </Navbar.Item>
+                  <Dropdown.Menu
+                     aria-label="Tutor.ai features"
+                     css={{
+                        '$$dropdownMenuWidth': '340px',
+                        '$$dropdownItemHeight': '70px',
+                        '& .nextui-dropdown-item': {
+                           'py': '$4',
+                           'svg': {
+                              color: '$secondary',
+                              mr: '$4',
+                              // mb: '$4'
+                           },
+                           mt: '$5',
+                           mb: '$3',
+                           '& .nextui-dropdown-item-content': {
+                              w: '100%',
+                              fontWeight: '$semibold',
+                              textAlign: 'left', // Add this line to left align the text
+                           },
+                        },
+                     }}
+                  >
+                     <Dropdown.Item
+                        key="AI Powered Class Preview and Review"
+                        showFullDescription
+                        description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
+                        icon={icons.scale}
+                     >
+                        <Link href='#feature1' css={{'color':'black'}}>AI Powered Class Preview and Review</Link>
+                     </Dropdown.Item>
+                     <Dropdown.Item
+                        key="AI-Driven Step by Step Problem Solving"
+                        showFullDescription
+                        description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
+                        icon={icons.activity}
+                     >
+                        <Link href='#feature2' css={{'color':'black'}}>AI-Driven Step by Step Problem Solving</Link>
+                     </Dropdown.Item>
+
+                  </Dropdown.Menu>
+               </Dropdown>
                <Navbar.Link href="#technologies">Technologies</Navbar.Link>
                <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutorai/team">Teams</Navbar.Link>
 
