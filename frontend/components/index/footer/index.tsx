@@ -3,7 +3,7 @@ import React from 'react';
 import {Box} from '../../styles/box';
 import {Flex} from '../../styles/flex';
 import Link from 'next/link';
-import Link from 'next/link';
+
 
 export const Footer = () => {
    return (
