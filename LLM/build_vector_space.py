@@ -4,10 +4,10 @@ from tqdm import tqdm
 from llama_index.core import VectorStoreIndex
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core import Document, StorageContext
-from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 from page_index import get_chapter_title
+from llama_index.embeddings.openai import OpenAIEmbedding
 
 import pytesseract
 import PyPDF2
@@ -16,7 +16,6 @@ import os
 import spacy
 import json
 import time
-import faiss
 
 
 
@@ -70,7 +69,8 @@ path = "LLM/C_Programming_Textbook.pdf"
 pdf_reader = get_pdf_reader(path)
 total_page = get_pdf_total_page(pdf_reader)
 
-embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-large-en-v1.5")
+embed_model = OpenAIEmbedding(model="text-embedding-3-large")
+
 embeddings_dim = len(embed_model.get_text_embedding("Hello World!"))
 Settings.embed_model = embed_model
 

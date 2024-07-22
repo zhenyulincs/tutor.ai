@@ -1,7 +1,7 @@
 *.ipynb
 *.pdf
 archive
-vector_storage
+*vector_storage
 mistral_model
 QA_Dataset
 __pycache__
