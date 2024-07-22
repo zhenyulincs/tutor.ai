@@ -13,16 +13,12 @@ const PromptSuggestionRow : React.FC<PromptSuggestionRowProps> = ({ onPromptClic
     [
     'ENGR 213',
     'ENGR 456',
-    'ENGR 478',
-    'ENGR 413',
   ],
   [
-    'Preview Class',
-    'Review Class',
-    'I don\' know how to do the homework',
-    'Not sure where do I got wrong for the homework',
-    'Preparing exam, need more paractice problems',
-    'Got an bad grade on exam, need analysis my weakness on knowledge'
+    'Class preview/review',
+    'Need Help with Homework',
+    'Generated Some Paractice Quiz',
+    'Free Talking'
   ],
 ];
 // console.log(prompt_index);

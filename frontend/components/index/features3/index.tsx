@@ -27,11 +27,11 @@ export const Features3 = () => {
                },
             }}
          >
-            <Flex direction="column">
+            <Flex direction="column" css={{ width: '50%' }}>
                <Text span css={{color: '$blue600'}}>
-                  Feature 3
                </Text>
-               <Text h3>Using AI to Prepare for Assessments</Text>
+               <Text h3 css={{fontSize: '$4xl'}}>Using AI to Prepare for Exam/Quiz</Text>
+
                <Text
                   span
                   css={{
@@ -40,8 +40,7 @@ export const Features3 = () => {
                   }}
                >
 
-                  Tutor.ai provides both assessment preparation and review resources,
-                  helping the student user refresh or strengthen their knowledge in their class topics.
+                  
                </Text>
 
                <Flex
@@ -53,7 +52,8 @@ export const Features3 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Assessment Preparation
+                        AI Generated Practice
+
                      </Text>
                      <Text
                         span
@@ -62,8 +62,8 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model can generate preparational content based on subject and topic
-                        the end user is being assessed on, such as a mock exam.  
+                        Practice with AI-generated tests and exercises that simulate real exam conditions, ensuring you&apos;re thoroughly prepared for any assessment.
+
 
                      </Text>
                   </Flex>
@@ -77,7 +77,8 @@ export const Features3 = () => {
                   <BoxIcon />
                   <Flex direction={'column'}>
                      <Text h4 weight={'medium'}>
-                        Assessment Review
+                        Knowledge Gap Analysis
+
                      </Text>
                      <Text
                         span
@@ -86,16 +87,16 @@ export const Features3 = () => {
                            color: '$accents8',
                         }}
                      >
-                        Our model analyzes the strengths and weaknesses in the student user&apos;s knowledge on specific topics
-                        in tandem to the assessment material, helping the student user fill in any of their knowledge gaps.
+                        Identify and address your knowledge gaps with AI-driven analysis, helping you focus on areas that need the most attention for continuous improvement.
+
                      </Text>
                   </Flex>
                </Flex>
    
 
             </Flex>
-            <Flex align={'center'}>
-               <FeatureIcon />
+            <Flex align={'center'} css={{ width: '50%' }}>
+               <FeatureIcon src='./feature3WF.jpg' style={{width:'100%'}}/>
             </Flex>
          </Flex>
          <Divider

@@ -3,11 +3,10 @@ import React from 'react';
 import { useEffect } from 'react';
 import { ModalLogin } from '../modal';
 import { icons } from './icons';
-import { AcmeLogo } from './logo';
+import { AcmeLogo  } from './logo';
 import { useTheme as useNextTheme } from 'next-themes';
 import { useTheme } from '@nextui-org/react';
 import { GithubIcon } from '../../icons/GithubIcon';
-
 export const Nav = () => {
    const { setTheme } = useNextTheme();
    const { isDark, type } = useTheme();
@@ -34,9 +33,10 @@ export const Nav = () => {
       >
          <Navbar.Brand>
             <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
-            <AcmeLogo />
+            <AcmeLogo ></AcmeLogo >
+
             <Text b color="inherit" hideIn="xs">
-               <Link href="pages/index.tsx">Tutor.ai</Link>
+               <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} >Tutor.ai</Link>
             </Text>
             <Navbar.Content
                hideIn="sm"
@@ -44,187 +44,10 @@ export const Nav = () => {
                   pl: '6rem',
                }}
             >
-               <Dropdown isBordered>
-                  <Navbar.Item>
-                     <Dropdown.Button
-                        auto
-                        light
-                        css={{
-                           px: 0,
-                           dflex: 'center',
-                           svg: { pe: 'none' },
-                        }}
-                        iconRight={icons.chevron}
-                        ripple={false}
-                     >
-                        Our Features
-                     </Dropdown.Button>
-                  </Navbar.Item>
-                  <Dropdown.Menu
-                     aria-label="Tutor.ai features"
-                     css={{
-                        '$$dropdownMenuWidth': '340px',
-                        '$$dropdownItemHeight': '80px',
-                        '& .nextui-dropdown-item': {
-                           'py': '$4',
-                           'my': '$2',
-                           'mx': '$2',
-                           'outline': 'solid',
-                           'outline-color': 'Gray',
-                           'outlineWidth': '0.5px',
-                           'svg': {
-                              color: '$secondary',
-                              mr: '$4',
-                           },
-                           '& .nextui-dropdown-item-content': {
-                              w: '100%',
-                              fontWeight: '$semibold',
-                           },
-                        },
-                     }}
-                  >
-                     <Dropdown.Item
-                        key="PreparAI"
-                        showFullDescription
-                        description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
-                        icon={icons.scale}
-                     >
-                        Smart Study Guide
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="HomeworkAidAI"
-                        showFullDescription
-                        description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
-                        icon={icons.activity}
-                     >
-                        AI-powered Q&A
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="QuizzAI"
-                        showFullDescription
-                        description="Create and practice with quizzes from your course material. "
-                        icon={icons.flash}
-                     >
-                        Assessment Prep Pro
-                     </Dropdown.Item>
-                  </Dropdown.Menu>
-               </Dropdown>
+               <Navbar.Link href="#features">Features</Navbar.Link>
+               <Navbar.Link href="#technologies">Technologies</Navbar.Link>
+               <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutorai/team">Teams</Navbar.Link>
 
-               <Dropdown isBordered>
-                  <Navbar.Item>
-                     <Dropdown.Button
-                        auto
-                        light
-                        css={{
-                           px: 0,
-                           dflex: 'center',
-                           svg: { pe: 'none' },
-                        }}
-                        iconRight={icons.chevron}
-                        ripple={false}
-                     >
-                        Use Cases
-                     </Dropdown.Button>
-                  </Navbar.Item>
-                  <Dropdown.Menu
-                     color="secondary"
-                     aria-label="Actions"
-                     css={{
-                        $$dropdownMenuWidth: "100%",
-                        display: 'flex',
-                        "flex-wrap": "wrap",
-                        '$$dropdownItemHeight': '100px',
-                        '& .nextui-dropdown-item': {
-                           'py': '$2',
-                           'my': '$5',
-                           'mx': '$4',
-                           'outline': 'solid',
-                           'outline-color': 'Gray',
-                           'outlineWidth': '0.5px',
-                           'svg': {
-                              color: '$secondary',
-                              mr: '$4',
-                           },
-                           
-                           h: "50%",
-                           '& .nextui-dropdown-item-content': {
-                              w: '100%',
-                              fontWeight: '$medium',
-                              margin:'$4 $4 $4 0',
-                           },
-                           w: '100%',
-                        },
-                        '& .nextui-dropdown-section-divider': {
-                           display: 'none'
-                        },
-                        '& .nextui-dropdown-section': {
-                           //background: '#000',
-
-                           margin: '$5',
-                           'mr': '$9' 
-                        },
-                        '& .nextui-dropdown-section-wrapper': {
-                           flex: "1 1 auto",
-                           "white-space": "nowrap",
-                           overflow: "hidden",
-                           "text-overflow":"ellipsis",
-                           
-                        },
-                        '& .nextui-dropdown-section-title': {
-                           fontWeight: '$semibold',
-                           "font-size": "inherit",
-                           color: "inherit"
-                        }
-                     }}
-                  >
-                     <Dropdown.Section title="Smart Study Guide">
-                        <Dropdown.Item
-                           key="Prepare for Class"
-                           icon={icons.server}
-                        >
-                           Class Preparation
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                           key="Review After Class"
-                           icon={icons.server}
-                        >
-                           Class Review
-                        </Dropdown.Item>
-                     </Dropdown.Section>
-                     <Dropdown.Section title="AI-powered Q&A">
-                        <Dropdown.Item
-                           key="Exam Preparation"
-                           icon={icons.server}
-                        >
-                           Exam Preparation
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                           key="Exam Review"
-                           icon={icons.server}
-                        >
-                           Exam Review
-                        </Dropdown.Item>
-
-                     </Dropdown.Section>
-                     <Dropdown.Section title="Assessment Preparation">
-                        <Dropdown.Item
-                           key="Practice Generation"
-                           icon={icons.server}
-                        >
-                           AI Generated Practice
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                           key="Knowledge Gap Analysis"
-                           icon={icons.server}
-                        >
-                           Knowledge Gap Analysis
-                        </Dropdown.Item>
-                     </Dropdown.Section>
-                  </Dropdown.Menu>
-               </Dropdown>
-
-               <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutor-ai-team/team">Our Team</Navbar.Link>
-               <Navbar.Link href="#">Placeholder 1</Navbar.Link>
             </Navbar.Content>
          </Navbar.Brand>
 

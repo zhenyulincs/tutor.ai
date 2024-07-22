@@ -7,7 +7,6 @@ from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.retrievers import QueryFusionRetriever
 from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.core.query_engine import RetrieverQueryEngine
-from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core.chat_engine import ContextChatEngine
 from llama_index.core.memory import ChatMemoryBuffer
@@ -16,6 +15,16 @@ from llama_index.core.base.llms.types import ChatMessage, MessageRole
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.core.retrievers import VectorIndexAutoRetriever
 from llama_index.core.vector_stores import MetadataInfo, VectorStoreInfo
+from llama_index.llms.llama_cpp import LlamaCPP
+from llama_index.llms.llama_cpp.llama_utils import (
+    B_INST,
+    E_INST,
+    DEFAULT_SYSTEM_PROMPT
+)
+
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(os.getcwd()),"LLM"))
 from llama_index.llms.llama_cpp import LlamaCPP
 from llama_index.llms.llama_cpp.llama_utils import (
     B_INST,
@@ -34,29 +43,16 @@ class rag():
     def __init__(self):
         nest_asyncio.apply()
 
-        embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-large-en-v1.5")
+        embed_model = OpenAIEmbedding(model="text-embedding-3-large")
         Settings.embed_model = embed_model
 
-        llm = LlamaCPP(
-            # You can pass in the URL to a GGML model to download it automatically
-            # optionally, you can set the path to a pre-downloaded model instead of model_url
-            model_path="LLM/mistral_model/ggml-model-f16.gguf",
-            temperature=0.2,
-            max_new_tokens=4096,
-            # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
-            context_window=7000,
-            # kwargs to pass to __call__()
-            generate_kwargs={},
-            # kwargs to pass to __init__()
-            # set to at least 1 to use GPU
-            model_kwargs={"n_gpu_layers": 15},
-            verbose=False,
-            completion_to_prompt=self._completion_to_prompt
-        )
-        # llm = OpenAI(model="gpt-4-turbo",temperature=0.5,max_tokens=4096,response_format={ "type": "json_object" })
+        self.llm = OpenAI(model="gpt-4-turbo",temperature=0.1,max_tokens=4096)
+    
+        Settings.llm = self.llm
+
+        self.chat_history = []
+    def set_vector_storage(self,path):
         
-        
-        Settings.llm = llm
         chapter_names = get_all_chapter_title()
         vector_store_info = VectorStoreInfo(
             content_info="information about a C Programming Book",
@@ -71,13 +67,13 @@ class rag():
                 
             ],
         )
-
+        
         # load index
         indexes = VectorStoreIndex([])
 
         bm25_indexes = []
-        vector_storages_path_list = os.listdir("LLM/vector_storage")
-        vector_storages_path_list = [os.path.join("LLM/vector_storage",vector_storages_path) for vector_storages_path in vector_storages_path_list]
+        vector_storages_path_list = os.listdir(path)
+        vector_storages_path_list = [os.path.join(path,vector_storages_path) for vector_storages_path in vector_storages_path_list]
 
         for vector_storages_path in vector_storages_path_list:
             
@@ -91,7 +87,7 @@ class rag():
         retriever = VectorIndexAutoRetriever(
             indexes,
             vector_store_info=vector_store_info,
-            verbose=False,
+            verbose=True,
         )
 
         bm25_retriever = BM25Retriever.from_defaults(
@@ -102,50 +98,31 @@ class rag():
             similarity_top_k=5,
             num_queries=0,  # set this to 1 to disable query generation
             use_async=True,
-            verbose=False,
+            verbose=True,
             mode="reciprocal_rerank",
         )
 
 
         memory = ChatMemoryBuffer.from_defaults(token_limit=4096)
         
-        
+        #### Mistral Model Only, Mistral Model need to specify JSON on system prompt also the user query
         system_prompt = [
             ChatMessage(
                 role="system", 
-                content="""
-                You will only respond with a JSON object with the keyword and description. Do not provide explanations.
-                Keywords must contain enough information able to search on youtube
-                Do not provide explanations.
-                #################
-                Example #1 Input :
-                [[JSON OBJECT]]
-                [
-                    {
-                        "keyword":,
-                        "description":
-                    }
-                                        {
-                        "keyword":,
-                        "description":
-                    }
-                                        {
-                        "keyword":,
-                        "description":
-                    }
-                ]
-                [[JSON OBJECT]]
-                
-                """
+                content=\
+                    """
+                    You are a helpful assistant.
+                    """
                 )
             ]
+
         self.chat_engine = ContextChatEngine(
             retriever,
-            llm=llm,
+            llm=self.llm,
             memory=memory,
             prefix_messages=system_prompt
         )
-        self.chat_history = []
+        
 
     def _completion_to_prompt(self,completion: str, system_prompt=None) -> str:
         system_prompt_str = system_prompt or DEFAULT_SYSTEM_PROMPT
@@ -157,96 +134,49 @@ class rag():
 
     
     
-    def chat(self,query):
-
-
+    def chat_rag(self,query):
+        print(self.chat_history)
         response = self.chat_engine.chat(query,self.chat_history)
-        # response = self.chat_engine.chat(query,self.chat_history)
-        self.chat_history.append(ChatMessage(role="user",content=str(response)))
         return str(response)
 
+    def chat_regular(self,query):
+        self.chat_history.append(ChatMessage(role='user', content=query))
+        response = self.llm.chat(self.chat_history).message.content
+        
+        return response
+    
     def clear_chat_history(self):
         self.chat_engine.reset()
         self.chat_history = []
         
-    
+    def convert_to_chat_message(self,messages):
+
+        self.chat_history = [ChatMessage(role=message['role'], content=message['content']) for message in messages]
+
 
     def get_youtube_type_response(self,query):
-        pre_query = \
-        """
-        You will only respond with a JSON object with the key keyword and description. Do not provide explanations.
-        the keywords must contain enough information can search on youtube
-        Example #1 Input :
-        [[JSON OBJECT]]
-        [
-            {
-                "keyword":,
-                "description":
-            }
-                                {
-                "keyword":,
-                "description":
-            }
-                                {
-                "keyword":,
-                "description":
-            }
-        ]
-        [[JSON OBJECT]]
-        
-        """
-        query = pre_query + query
-        response = self.chat(query)
-        print(query)
-        print("=====================")
-        print(response)
-        # cleaned_json_data = response.strip('```json').strip('```').strip()
+        post_query = "You will only respond with a list of JSON objects with the key youtube_search_keyword and description. Do not provide explanations."
+        rephase_query = query + post_query
+
+        response = self.chat_rag(rephase_query)
         cleaned_json_data = json.loads(response)
         searcher = YouTubeSearcher()
         youtube_results = []
         keywords = []
         descriptions = []
         for keyword_description_pair in cleaned_json_data:
-            keyword,description = keyword_description_pair.items()
+            keyword,description = keyword_description_pair.values()
             youtube_results.append(searcher.search_videos(keyword))
             keywords.append(keyword)
             descriptions.append(description)
         
-        learning_outline = "Your learning outline is "
-        related_youtube_link = "here is related youtube video link:"
-        for keyword in keywords:
-            learning_outline += keyword[1]
-            learning_outline += " \n"
-        for youtube_result_keywords in youtube_results:
-            for youtube_result in youtube_result_keywords:
-                related_youtube_link += "Title: "
-                related_youtube_link += youtube_result[0]
-                related_youtube_link += " "
-                related_youtube_link += "Link: "
-                related_youtube_link += youtube_result[1]
-                related_youtube_link += "\n"
-        final_response = \
-        f"""
-        {learning_outline}
-        {related_youtube_link}
-        """
-        return final_response
+        self.clear_chat_history()
+        query_with_video_content = f"Base on the following information {str(youtube_results)}, use tutor's style to answer {query}. make sure your answer should include all the youtube link"
+        response_with_video_content = self.chat_regular(query_with_video_content)
+        return response_with_video_content
 
-rag = rag()
+# rag = rag()
 
-# print(rag.get_youtube_type_response("Generate assessment questions and asnwers based on the chapter Formatted Input/Output"))
-# print(rag.chat(query="Given me an learning outline for Formatted Input/Output in JSON object"))
-counter = 0
-i = -1
-while i < 100:
-    i += 1
-    try:
-        response = rag.chat(query="Generate the learning outline for Formatted Input/Output in JSON Object, with keys are keyword and description")
-        json.loads(response)
-        counter += 1
-        print(response)
-        rag.clear_chat_history()
-    except:
-        print("============================================Error:=========================================")
-        print(response)
-print(f"Acc: {counter}%")
+# print(rag.chat_rag("Given me an learning outline for Formatted Input/Output"))
+# print(rag.chat_engine.chat("Given me an outline for Formatted Input/Output.",[]))
+# print(rag.get_youtube_type_response(query="Given me an outline for Formatted Input/Output"))
