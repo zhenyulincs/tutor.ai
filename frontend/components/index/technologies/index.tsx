@@ -21,7 +21,10 @@ export const Technologies = () => {
             }}
          >
             <Text h1 css={{textAlign: 'center', fontSize: '$4xl'}}>
-               Backend Technologies
+               Backend Technologies,
+               <br>
+               </br>
+               Retrieval-Augmented Generation (RAG) and Finetuning
             </Text>
             <Flex align={'center'} justify={'center'} css={{width: '100%', 'pt': '$10'}}>
                <img src='technologies.png' width="80%" />
