@@ -12,10 +12,10 @@ const PromptSuggestionRow : React.FC<PromptSuggestionRowProps> = ({ onPromptClic
   const prompts = [
     [
     'ENGR 213',
-    'ENGR 456',
   ],
   [
-    'Class preview/review',
+    'Class Preview',
+    'Class Review',
     'Need Help with Homework',
     'Generated Some Paractice Quiz',
     'Free Talking'

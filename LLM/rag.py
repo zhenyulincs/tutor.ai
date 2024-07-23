@@ -152,25 +152,44 @@ class rag():
 
         self.chat_history = [ChatMessage(role=message['role'], content=message['content']) for message in messages]
 
+    def convert_to_seconds(self, time_str):
+        minutes, seconds = map(int, time_str.split(':'))
+        return minutes * 60 + seconds
+    
+    def get_youtube_type_response(self,query,video_length_lower=1*60,video_length_upper=5*60):
+        post_query = "can you generate a list of the key points and descriptions?"
+        rephrase_query = query + post_query
 
-    def get_youtube_type_response(self,query):
-        post_query = "You will only respond with a list of JSON objects with the key youtube_search_keyword and description. Do not provide explanations."
-        rephase_query = query + post_query
-
-        response = self.chat_rag(rephase_query)
+        response = self.chat_rag(rephrase_query)
+        print(response)
+        print("==============")
+        self.chat_history.append(ChatMessage(role="assistant", content=response))
+        response = self.chat_regular("Make your answer into a list of JSON objects with keys: youtube_search_key and description. Do not explain anything additional. Start with [{")
+        print(response)
         cleaned_json_data = json.loads(response)
         searcher = YouTubeSearcher()
         youtube_results = []
+        video_lengths = []  # To store the lengths of the videos
         keywords = []
         descriptions = []
+        
         for keyword_description_pair in cleaned_json_data:
-            keyword,description = keyword_description_pair.values()
-            youtube_results.append(searcher.search_videos(keyword))
+            keyword, description = keyword_description_pair.values()
+            search_results = searcher.search_videos(keyword)
+            filtered_results = [
+                video for video in search_results 
+                if video_length_lower <= self.convert_to_seconds(video['length']) <= video_length_upper
+            ]
+            ranked_results = sorted(filtered_results, key=lambda x: x['likes'], reverse=True)[:2]  # Get top 2 videos
+            youtube_results.append(ranked_results)
+            video_lengths.extend([video['length'] for video in ranked_results])  # Store the lengths in the new format
             keywords.append(keyword)
             descriptions.append(description)
-        
+        if len(youtube_results) > 3:
+            youtube_results = youtube_results[0:3]
+            
         self.clear_chat_history()
-        query_with_video_content = f"Base on the following information {str(youtube_results)}, use tutor's style to answer {query}. make sure your answer should include all the youtube link"
+        query_with_video_content = f"Based on the following information {str(youtube_results)}, use tutor's style to answer {query}. Make sure your answer includes all the YouTube links."
         response_with_video_content = self.chat_regular(query_with_video_content)
         return response_with_video_content
 

@@ -38,7 +38,7 @@ const AI_Chat: NextPage = () => {
   ]
 
   const { append, messages, input, handleInputChange, handleSubmit, setMessages } = useChat(
-    { api: "https://tutorai.zhenyulincs.com/api/ai", 
+    { api: "http://127.0.0.1:5000/api/ai", 
       initialMessages: init_messages, 
       streamMode: 'text',
       headers: {"Content-Type":"application/json"}}
@@ -67,12 +67,7 @@ const AI_Chat: NextPage = () => {
     if (users_message_count == 0) {
       pre_messages.push(...functionality_question(msg.content));
       setMessages([...messages,...pre_messages]);
-    } else if (users_message_count == 1) {
-      pre_messages.push(...connecting_message);
-      setMessages([...messages,...pre_messages]);
-      const handshake_message: Message = { id: crypto.randomUUID(), content: "Hi, would you like to introduce yourself?", role: 'user' };
-      append(handshake_message, { options: {  } });
-    }
+    } 
     
     else {
       append(msg, { options: {  } });
