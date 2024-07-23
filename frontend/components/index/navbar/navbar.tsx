@@ -57,7 +57,7 @@ export const Nav = () => {
                         iconRight={icons.chevron}
                         ripple={false}
                      >
-                        Our Features
+                        Features
                      </Dropdown.Button>
                   </Navbar.Item>
                   <Dropdown.Menu
@@ -85,15 +85,15 @@ export const Nav = () => {
                      <Dropdown.Item
                         key="AI-Powered Class Preview and Review"
                         showFullDescription
-                        description="place holder - dr qin"
+                        description="Analyzes, and recommends high-quality concept video. Provides automated post-class learning support "
                         icon={icons.scale}
                      >
-                        <Link href='#feature1' css={{'color':'black'}}>AI Powered Class Preview and Review</Link>
+                        <Link href='#feature1' css={{'color':'black'}}>AI-Powered Class Preview and Review</Link>
                      </Dropdown.Item>
                      <Dropdown.Item
                         key="AI-Driven Step by Step Problem Solving"
                         showFullDescription
-                        description="place holder -dr qin"
+                        description="Provides real-time analysis and explanation of mistakes. Offers step-by-step guidance for problem-solving"
                         icon={icons.activity}
                      >
                         <Link href='#feature2' css={{'color':'black'}}>AI-Driven Step-by-step Problem Solving</Link>

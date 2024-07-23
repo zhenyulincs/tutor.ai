@@ -35,7 +35,7 @@ export const Features2 = () => {
             <Flex align={'end'} direction="column" css={{ width: '50%', alignItems: 'flex-end' }}>
                <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3 css={{fontSize: '$4xl',textAlign:'right'}}>AI-Driven Step by Step Problem Solving
+               <Text h3 css={{fontSize: '$4xl',textAlign:'right'}}>AI-Driven Step by Step <br></br>Problem Solving
                </Text>
 
 

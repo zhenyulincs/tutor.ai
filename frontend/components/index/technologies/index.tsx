@@ -18,32 +18,14 @@ export const Technologies = () => {
                   px: '$64',
                },
                'pb': '$10'
-
             }}
          >
-            <Text h1 css={{textAlign: 'center',
-                           fontSize: '$4xl'
-            }}>
-               Innovative Methodology & Breakthrough Technology
-
-
-
+            <Text h1 css={{textAlign: 'center', fontSize: '$4xl'}}>
+               Backend Technologies
             </Text>
-            <Text
-               css={{
-                  color: '$accents8',
-                  maxWidth: '1400px',
-                  textAlign: 'center',
-                  'pt': '$10'
-               }}
-               weight="normal"
-               size={'$2xl'}
-            >
-
-               Work In Progress
-
-
-            </Text>
+            <Flex align={'center'} justify={'center'} css={{width: '100%', 'pt': '$10'}}>
+               <img src='technologies.png' width="80%" />
+            </Flex>
             <Grid.Container
                gap={6}
                alignItems="center"
@@ -56,27 +38,20 @@ export const Technologies = () => {
                   '&  span': {
                      whiteSpace: 'pre',
                   }
-                  
                }}
             >
                <Grid sm={3} justify="center">
                   <Flex align={'center'} justify={'center'}>
-               
                   </Flex>
                </Grid>
                <Grid sm={3} justify="center">
                   <Flex align={'center'}>
-                     
                   </Flex>
                </Grid>
-
             </Grid.Container>
          </Flex>
-
          <Divider
-
             css={{position: 'absolute', inset: '0p', left: '0', mt: '$0'}}
-
          />
       </>
    );

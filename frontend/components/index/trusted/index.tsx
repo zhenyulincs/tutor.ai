@@ -40,7 +40,7 @@ export const Trusted = () => {
                weight="normal"
                size={'$2xl'}
             >
-               place holder - dr qin
+               Tutor.AI transforms personalized learning through AI-Powered Class Preview and Review, along with AI-Driven Step-by-Step Problem Solving. Our platform adapts to individual student needs, delivering instant analysis and explanations for errors, and offering precise guidance through each problem-solving step, enhancing academic achievement with accessibility and efficiency
 
             </Text>
             <Grid.Container
