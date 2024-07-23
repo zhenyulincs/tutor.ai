@@ -83,9 +83,9 @@ export const Nav = () => {
                      }}
                   >
                      <Dropdown.Item
-                        key="AI Powered Class Preview and Review"
+                        key="AI-Powered Class Preview and Review"
                         showFullDescription
-                        description="Analyzes, Searches, Recommends targeted educational content, and aids comprehension"
+                        description="place holder - dr qin"
                         icon={icons.scale}
                      >
                         <Link href='#feature1' css={{'color':'black'}}>AI Powered Class Preview and Review</Link>
@@ -93,10 +93,10 @@ export const Nav = () => {
                      <Dropdown.Item
                         key="AI-Driven Step by Step Problem Solving"
                         showFullDescription
-                        description="Analyzes, Explains errors, Guides problem-solving, and Improves learning outcomes."
+                        description="place holder -dr qin"
                         icon={icons.activity}
                      >
-                        <Link href='#feature2' css={{'color':'black'}}>AI-Driven Step by Step Problem Solving</Link>
+                        <Link href='#feature2' css={{'color':'black'}}>AI-Driven Step-by-step Problem Solving</Link>
                      </Dropdown.Item>
 
                   </Dropdown.Menu>

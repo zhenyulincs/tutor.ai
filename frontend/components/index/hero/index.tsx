@@ -97,7 +97,7 @@ export const Hero = () => {
                   size={'$lg'}
                   span
                >
-                  Curating a learning experience for you, for any subject,
+                  Curating a personalize learning experience for you, for any subject,
                   using AI.
                   
                </Text>

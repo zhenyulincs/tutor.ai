@@ -40,12 +40,7 @@ export const Trusted = () => {
                weight="normal"
                size={'$2xl'}
             >
-               Tutor.AI revolutionizes learning with features like the Smart Study Guide,
-               AI-Powered Q&A, and Assessment Prep Pro. 
-               <br></br>
-               Our platform adapts to each student&apos;s needs, 
-               offering targeted resources, instant answers, and effective exam preparation, 
-               making academic success accessible and efficient.
+               place holder - dr qin
 
             </Text>
             <Grid.Container
