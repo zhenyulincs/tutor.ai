@@ -89,7 +89,7 @@ export const Features1 = () => {
                </Flex>
             </Flex>
             <Flex align={'end'} css={{ width: '50%' }}>
-               <FeatureIcon src="./feature1WF.jpg" style={{ width: '100%' }} />
+               <FeatureIcon src="feature1WF.jpg" style={{ width: '100%' }} />
             </Flex>
          </Flex>
          <Divider css={{ position: 'absolute', inset: '0p', left: '0', mt: '$2' }} />

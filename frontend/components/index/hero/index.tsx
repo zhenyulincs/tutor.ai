@@ -52,7 +52,7 @@ export const Hero = () => {
                         display: 'inline',
                      }}
                   >
-                     Tutor.ai turns your  {' '}
+                     AICO turns your  {' '}
                   </Text>
 
                   <Text
@@ -119,7 +119,7 @@ export const Hero = () => {
                      href="ai_chat"
                   >
                      <Button>
-                        Try Tutor.ai
+                        Try AICO
                      </Button>
                   </Link>
 

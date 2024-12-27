@@ -30,7 +30,7 @@ export const Features2 = () => {
             }}
          >
             <Flex align={'center'} css={{ width: '50%' }}>
-               <FeatureIcon src='./feature2WF.jpg' style={{width:'100%'}}/>
+               <FeatureIcon src='feature2WF.jpg' style={{width:'100%'}}/>
             </Flex>
             <Flex align={'end'} direction="column" css={{ width: '50%', alignItems: 'flex-end' }}>
                <Text span css={{color: '$blue600'}}>

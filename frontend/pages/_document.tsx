@@ -30,7 +30,7 @@ class MyDocument extends Document {
                rel="stylesheet"
             />
             <Head>{CssBaseline.flush()}</Head>
-
+           
             <body>
                <Main />
                <NextScript />

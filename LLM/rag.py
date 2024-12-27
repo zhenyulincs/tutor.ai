@@ -189,7 +189,7 @@ class rag():
             youtube_results = youtube_results[0:3]
             
         self.clear_chat_history()
-        query_with_video_content = f"Based on the following information {str(youtube_results)}, use tutor's style to answer {query}. Make sure your answer includes all the YouTube links."
+        query_with_video_content = f"Use tutor's style to answer {query}. Make sure your answer includes the supplement YouTube links. here is the youtube link info: {str(youtube_results)}"
         response_with_video_content = self.chat_regular(query_with_video_content)
         return response_with_video_content
 

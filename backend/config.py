@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-env = os.getenv('FLASK_ENV', 'development')
+env = os.getenv('FLASK_ENV', 'production')
 if env == 'development':
     load_dotenv('.env.development')
 elif env == 'production':

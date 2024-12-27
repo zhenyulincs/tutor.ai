@@ -21,7 +21,7 @@ export const Technologies = () => {
             }}
          >
             <Text h1 css={{textAlign: 'center', fontSize: '$4xl'}}>
-               Backend Technologies,
+               Backend Technologies:
                <br>
                </br>
                Retrieval-Augmented Generation (RAG) and Finetuning

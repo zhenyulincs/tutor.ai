@@ -36,7 +36,7 @@ export const Nav = () => {
             <AcmeLogo ></AcmeLogo >
 
             <Text b color="inherit" hideIn="xs">
-               <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} >Tutor.ai</Link>
+               <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} >AICO</Link>
             </Text>
             <Navbar.Content
                hideIn="sm"
@@ -98,11 +98,19 @@ export const Nav = () => {
                      >
                         <Link href='#feature2' css={{'color':'black'}}>AI-Driven Step-by-step Problem Solving</Link>
                      </Dropdown.Item>
+                     <Dropdown.Item
+                        key="Al-Assisted Practice Generation"
+                        showFullDescription
+                        description="Identifies knowledge gaps from your mistakes. Creates Ouiz/Exam practice from yourcourse material."
+                        icon={icons.flash}
+                     >
+                        <Link href='#feature3' css={{'color':'black'}}>Al-Assisted Practice Generation</Link>
+                     </Dropdown.Item>
 
                   </Dropdown.Menu>
                </Dropdown>
                <Navbar.Link href="#technologies">Technologies</Navbar.Link>
-               <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutorai/team">Teams</Navbar.Link>
+               {/* <Navbar.Link href="https://sites.google.com/my.smccd.edu/tutorai/team">Teams</Navbar.Link> */}
 
             </Navbar.Content>
          </Navbar.Brand>
