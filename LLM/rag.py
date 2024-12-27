@@ -159,6 +159,13 @@ class rag():
     def get_youtube_type_response(self,query,video_length_lower=1*60,video_length_upper=5*60):
         post_query = "can you generate a list of the key points and descriptions?"
         rephrase_query = query + post_query
+    def convert_to_seconds(self, time_str):
+        minutes, seconds = map(int, time_str.split(':'))
+        return minutes * 60 + seconds
+    
+    def get_youtube_type_response(self,query,video_length_lower=1*60,video_length_upper=5*60):
+        post_query = "can you generate a list of the key points and descriptions?"
+        rephrase_query = query + post_query
 
         response = self.chat_rag(rephrase_query)
         print(response)

@@ -17,6 +17,7 @@ client = OpenAI(
 )
 rag_bot = rag()
 rag_bot.set_vector_storage("../LLM/vector_storage")
+rag_bot.set_vector_storage("../LLM/vector_storage")
 
 @app.route('/api/ai', methods=['POST'])
 @cross_origin(origins="*", methods=["GET", "POST"], allow_headers=["Content-Type"])
@@ -37,6 +38,9 @@ def ai_endpoint():
                 *histroy
             ]
         )
+        if len(data['messages']) <= 4:
+            
+            sufix = f"The user want to {functionality}, can you ask user 1 most necessary question first"
         if len(data['messages']) <= 4:
             
             sufix = f"The user want to {functionality}, can you ask user 1 most necessary question first"
@@ -69,6 +73,7 @@ def ai_endpoint():
 
     except Exception as e:
         print(e)
+        return f"Error: Please Try again", 200
         return f"Error: Please Try again", 200
 
 
