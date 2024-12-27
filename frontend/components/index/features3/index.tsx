@@ -9,6 +9,7 @@ export const Features3 = () => {
    return (
       <>
          <Flex
+            id='feature3'
             direction={'column'}
             css={{
                'gap': '1rem',
@@ -30,7 +31,7 @@ export const Features3 = () => {
             <Flex direction="column" css={{ width: '50%' }}>
                <Text span css={{color: '$blue600'}}>
                </Text>
-               <Text h3 css={{fontSize: '$4xl'}}>Using AI to Prepare for Exam/Quiz</Text>
+               <Text h3 css={{fontSize: '$4xl'}}>Al-Assisted Practice Generation</Text>
 
                <Text
                   span

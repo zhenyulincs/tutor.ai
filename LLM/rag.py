@@ -159,6 +159,13 @@ class rag():
     def get_youtube_type_response(self,query,video_length_lower=1*60,video_length_upper=5*60):
         post_query = "can you generate a list of the key points and descriptions?"
         rephrase_query = query + post_query
+    def convert_to_seconds(self, time_str):
+        minutes, seconds = map(int, time_str.split(':'))
+        return minutes * 60 + seconds
+    
+    def get_youtube_type_response(self,query,video_length_lower=1*60,video_length_upper=5*60):
+        post_query = "can you generate a list of the key points and descriptions?"
+        rephrase_query = query + post_query
 
         response = self.chat_rag(rephrase_query)
         print(response)
@@ -189,7 +196,7 @@ class rag():
             youtube_results = youtube_results[0:3]
             
         self.clear_chat_history()
-        query_with_video_content = f"Based on the following information {str(youtube_results)}, use tutor's style to answer {query}. Make sure your answer includes all the YouTube links."
+        query_with_video_content = f"Use tutor's style to answer {query}. Make sure your answer includes the supplement YouTube links. here is the youtube link info: {str(youtube_results)}"
         response_with_video_content = self.chat_regular(query_with_video_content)
         return response_with_video_content
 
